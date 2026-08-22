@@ -4,6 +4,7 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 public class PieceHover : MonoBehaviour
 {
     public Color hoverColor = Color.cyan;
+    public AudioSource hoverSound;
     private Color originalColor;
     private MeshRenderer meshRenderer;
 
@@ -16,6 +17,10 @@ public class PieceHover : MonoBehaviour
     public void OnHoverEnter()
     {
         meshRenderer.material.color = hoverColor;
+        if (hoverSound != null && !hoverSound.isPlaying)
+        {
+            hoverSound.Play();
+        }
     }
 
     public void OnHoverExit()

@@ -444,8 +444,8 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 80128646}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+      - m_Target: {fileID: 1367349751}
+        m_TargetAssemblyTypeName: RandomPitchAudioPlayer, Assembly-CSharp
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:
@@ -575,7 +575,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 2a78fcc2d4f0f2845b208223c6c4b5a2, type: 3}
+  m_Resource: {fileID: 8300000, guid: 972c7d7724f6361489a9a9b0438b9f44, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.5
   m_Pitch: 1
@@ -686,6 +686,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PieceHover
   hoverColor: {r: 1, g: 0.7921569, b: 0.9490196, a: 1}
+  hoverSound: {fileID: 80128646}
 --- !u!1 &86961378 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 16880cef7052b5940ae37edbe61a2c5f, type: 3}
@@ -5233,8 +5234,8 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 797614841}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+      - m_Target: {fileID: 1367349751}
+        m_TargetAssemblyTypeName: RandomPitchAudioPlayer, Assembly-CSharp
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:
@@ -5364,7 +5365,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 2a78fcc2d4f0f2845b208223c6c4b5a2, type: 3}
+  m_Resource: {fileID: 8300000, guid: 972c7d7724f6361489a9a9b0438b9f44, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.5
   m_Pitch: 1
@@ -5475,6 +5476,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PieceHover
   hoverColor: {r: 1, g: 0.7921569, b: 0.9490196, a: 1}
+  hoverSound: {fileID: 80128646}
 --- !u!1 &814571443 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: b8f2a63e9dc62fc4591190506818681e, type: 3}
@@ -7322,8 +7324,8 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1196525146}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+      - m_Target: {fileID: 1367349751}
+        m_TargetAssemblyTypeName: RandomPitchAudioPlayer, Assembly-CSharp
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:
@@ -7453,7 +7455,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 2a78fcc2d4f0f2845b208223c6c4b5a2, type: 3}
+  m_Resource: {fileID: 8300000, guid: 972c7d7724f6361489a9a9b0438b9f44, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.5
   m_Pitch: 1
@@ -7564,6 +7566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PieceHover
   hoverColor: {r: 1, g: 0.7921569, b: 0.9490196, a: 1}
+  hoverSound: {fileID: 80128646}
 --- !u!1 &1200433155
 GameObject:
   m_ObjectHideFlags: 0
@@ -8813,7 +8816,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 2a78fcc2d4f0f2845b208223c6c4b5a2, type: 3}
+  m_Resource: {fileID: 8300000, guid: 972c7d7724f6361489a9a9b0438b9f44, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.5
   m_Pitch: 1
@@ -8912,6 +8915,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PieceHover
   hoverColor: {r: 1, g: 0.7921569, b: 0.9490196, a: 1}
+  hoverSound: {fileID: 1346983228}
 --- !u!1 &1358939573 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2375333709327623998, guid: 8d42fbd0989b56a4cbc82ac294d1f96e, type: 3}
@@ -8989,8 +8993,8 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1358939578}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+      - m_Target: {fileID: 1367349751}
+        m_TargetAssemblyTypeName: RandomPitchAudioPlayer, Assembly-CSharp
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:
@@ -9120,7 +9124,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 2a78fcc2d4f0f2845b208223c6c4b5a2, type: 3}
+  m_Resource: {fileID: 8300000, guid: 972c7d7724f6361489a9a9b0438b9f44, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.5
   m_Pitch: 1
@@ -9231,6 +9235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PieceHover
   hoverColor: {r: 1, g: 0.7921569, b: 0.9490196, a: 1}
+  hoverSound: {fileID: 80128646}
 --- !u!1 &1367349748
 GameObject:
   m_ObjectHideFlags: 0
@@ -13525,8 +13530,8 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2065947250}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+      - m_Target: {fileID: 1367349751}
+        m_TargetAssemblyTypeName: RandomPitchAudioPlayer, Assembly-CSharp
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:
@@ -13656,7 +13661,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 2a78fcc2d4f0f2845b208223c6c4b5a2, type: 3}
+  m_Resource: {fileID: 8300000, guid: 972c7d7724f6361489a9a9b0438b9f44, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.5
   m_Pitch: 1
@@ -13767,6 +13772,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PieceHover
   hoverColor: {r: 1, g: 0.7921569, b: 0.9490196, a: 1}
+  hoverSound: {fileID: 80128646}
 --- !u!1 &2073239983 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: 2063c7556c062824a8d559f8ae00bc70, type: 3}
