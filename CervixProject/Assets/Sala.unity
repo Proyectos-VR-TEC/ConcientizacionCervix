@@ -708,6 +708,7 @@ MonoBehaviour:
   snapDistance: 0.3
   snapSound: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
   locucionClip: {fileID: 8300000, guid: b7e1284823199ce41aeecc6af4e6549b, type: 3}
+  closingSound: {fileID: 8300000, guid: 52dae7144646f3348a5ce8a58d08b026, type: 3}
   locucionDelay: 0.5
   slotFantasma: {fileID: 86961378}
   infoPanel: {fileID: 3440248930427154593}
@@ -1118,6 +1119,7 @@ MonoBehaviour:
   snapDistance: 0.3
   snapSound: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
   locucionClip: {fileID: 8300000, guid: 402bd4ff9a4e8014fb7a56c103ee20a9, type: 3}
+  closingSound: {fileID: 8300000, guid: 52dae7144646f3348a5ce8a58d08b026, type: 3}
   locucionDelay: 0.5
   slotFantasma: {fileID: 225624365}
   infoPanel: {fileID: 1928061151156068976}
@@ -2465,6 +2467,7 @@ MonoBehaviour:
   snapDistance: 0.3
   snapSound: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
   locucionClip: {fileID: 8300000, guid: bf00caeba20119d438a52edd5936a9d9, type: 3}
+  closingSound: {fileID: 8300000, guid: 52dae7144646f3348a5ce8a58d08b026, type: 3}
   locucionDelay: 0.5
   slotFantasma: {fileID: 397379488}
   infoPanel: {fileID: 3115682787469625752}
@@ -4081,6 +4084,7 @@ MonoBehaviour:
   snapDistance: 0.3
   snapSound: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
   locucionClip: {fileID: 8300000, guid: d507138973194284dbe6afa0cdcc04c5, type: 3}
+  closingSound: {fileID: 8300000, guid: 52dae7144646f3348a5ce8a58d08b026, type: 3}
   locucionDelay: 0.5
   slotFantasma: {fileID: 668908498}
   infoPanel: {fileID: 4714167993255051888}
@@ -9447,6 +9451,7 @@ MonoBehaviour:
   snapDistance: 0.3
   snapSound: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
   locucionClip: {fileID: 8300000, guid: 51321fba56118544ea8e3b6e05c89538, type: 3}
+  closingSound: {fileID: 8300000, guid: 52dae7144646f3348a5ce8a58d08b026, type: 3}
   locucionDelay: 0.5
   slotFantasma: {fileID: 1375031025}
   infoPanel: {fileID: 1067246100561369955}
@@ -12498,6 +12503,7 @@ MonoBehaviour:
   snapDistance: 0.3
   snapSound: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
   locucionClip: {fileID: 8300000, guid: f86a951d758e69940b24481b8084d4fc, type: 3}
+  closingSound: {fileID: 8300000, guid: 52dae7144646f3348a5ce8a58d08b026, type: 3}
   locucionDelay: 0.5
   slotFantasma: {fileID: 1920437755}
   infoPanel: {fileID: 8854755839493459527}
