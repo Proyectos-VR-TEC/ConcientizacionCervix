@@ -13,6 +13,10 @@ public class PuzzleSlot : MonoBehaviour
     public float locucionDelay = 0.5f;
     public GameObject slotFantasma;
 
+    public TriviaManager triviaManager; // Referencia al TriviaManager
+
+    public XRGrabInteractable[] grabInteractables; // Array para almacenar los XRGrabInteractables de las piezas
+
     private AudioSource audioSource;
     private bool isCompleted = false;
     private Rigidbody pieceRb;
@@ -109,7 +113,15 @@ public class PuzzleSlot : MonoBehaviour
             targetPiece.transform.rotation = transform.rotation;
 
             // Desactivar grab
+            pieceGrab.interactionLayers = 0;
             pieceGrab.enabled = false;
+            triviaManager.StartTrivia(targetPiece.GetComponent<PuzzlePiece>().correctAnswerValue);
+
+            // Desactivar los XRGrabInteractables de las piezas
+            foreach (var grabInteractable in grabInteractables)
+            {
+                grabInteractable.enabled = false;
+            }
 
             // Sonido
             if (snapSound != null)

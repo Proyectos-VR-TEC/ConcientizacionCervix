@@ -5,6 +5,8 @@ public class PuzzlePiece : MonoBehaviour
     private Vector3 initialPosition;
     private Quaternion initialRotation;
     private Rigidbody rb;
+    [Header("Valor correcto")]
+    public int correctAnswerValue;
 
     void Start()
     {
