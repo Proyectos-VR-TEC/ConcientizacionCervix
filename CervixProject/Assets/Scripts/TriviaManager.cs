@@ -19,6 +19,9 @@ public class TriviaManager : MonoBehaviour
 
     [Header("Grab interactables de las piezas")]
     public XRGrabInteractable[] grabInteractables;
+    
+    [Header("Simple interactables de los botones")]
+    public XRSimpleInteractable[] simpleInteractables;
 
     /// <summary>
     /// Llamar esto desde la pieza cuando se coloca en su lugar correcto.
@@ -51,6 +54,30 @@ public class TriviaManager : MonoBehaviour
         foreach (var grabInteractable in grabInteractables)
         {
             grabInteractable.enabled = true;
+        }
+    }
+
+    public void DisableGrabInteractables()
+    {
+        foreach (var grabInteractable in grabInteractables)
+        {
+            grabInteractable.enabled = false;
+        }
+    }
+
+    public void EnableSimpleInteractables()
+    {
+        foreach (var simpleInteractable in simpleInteractables)
+        {
+            simpleInteractable.enabled = true;
+        }
+    }
+
+    public void DisableSimpleInteractables()
+    {
+        foreach (var simpleInteractable in simpleInteractables)
+        {
+            simpleInteractable.enabled = false;
         }
     }
 }
