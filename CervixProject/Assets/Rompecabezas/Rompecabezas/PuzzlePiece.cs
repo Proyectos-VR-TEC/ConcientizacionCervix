@@ -8,6 +8,9 @@ public class PuzzlePiece : MonoBehaviour
     [Header("Valor correcto")]
     public int correctAnswerValue;
 
+    public AudioClip correctClip;
+    public AudioClip incorrectClip;
+
     void Start()
     {
         initialPosition = transform.position;

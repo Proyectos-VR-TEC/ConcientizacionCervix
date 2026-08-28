@@ -14,6 +14,11 @@ public class TriviaManager : MonoBehaviour
     [SerializeField] private int currentCorrectValue;
     public int CurrentCorrectValue => currentCorrectValue;
 
+    public AudioSource audioSource;
+
+    [SerializeField] private AudioClip currentCorrectAudioClip;
+    [SerializeField] private AudioClip currentIncorrectAudioClip;
+
     [Header("Panel de la UI de trivia")]
     public GameObject triviaPanel;
 
@@ -27,9 +32,13 @@ public class TriviaManager : MonoBehaviour
     /// Llamar esto desde la pieza cuando se coloca en su lugar correcto.
     /// </summary>
     /// <param name="correctValue">El INT correcto que debe coincidir con el botón.</param>
-    public void StartTrivia(int correctValue)
+    /// <param name="correctClip">El AudioClip que se reproduce cuando la respuesta es correcta.</param>
+    /// <param name="incorrectClip">El AudioClip que se reproduce cuando la respuesta es incorrecta.</param>
+    public void StartTrivia(int correctValue, AudioClip correctClip, AudioClip incorrectClip)
     {
         currentCorrectValue = correctValue;
+        currentCorrectAudioClip = correctClip;
+        currentIncorrectAudioClip = incorrectClip;
 
         if (triviaPanel != null)
         {
@@ -46,6 +55,22 @@ public class TriviaManager : MonoBehaviour
         if (triviaPanel != null)
         {
             triviaPanel.SetActive(false);
+        }
+    }
+
+    public void PlayCorrectAudio()
+    {
+        if (currentCorrectAudioClip != null)
+        {
+            audioSource.PlayOneShot(currentCorrectAudioClip);
+        }
+    }
+
+    public void PlayIncorrectAudio()
+    {
+        if (currentIncorrectAudioClip != null)
+        {
+            audioSource.PlayOneShot(currentIncorrectAudioClip);
         }
     }
 

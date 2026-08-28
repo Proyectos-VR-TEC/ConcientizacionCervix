@@ -115,7 +115,10 @@ public class PuzzleSlot : MonoBehaviour
             // Desactivar grab
             pieceGrab.interactionLayers = 0;
             pieceGrab.enabled = false;
-            triviaManager.StartTrivia(targetPiece.GetComponent<PuzzlePiece>().correctAnswerValue);
+            triviaManager.StartTrivia(
+                targetPiece.GetComponent<PuzzlePiece>().correctAnswerValue, 
+                targetPiece.GetComponent<PuzzlePiece>().correctClip, 
+                targetPiece.GetComponent<PuzzlePiece>().incorrectClip);
 
             // Desactivar los XRGrabInteractables de las piezas
             foreach (var grabInteractable in grabInteractables)
