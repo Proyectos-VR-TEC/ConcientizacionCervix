@@ -17,7 +17,7 @@ public class RandomPitchAudioPlayer : MonoBehaviour
     [Tooltip("Si es true, el pitch cambiará cada vez que se reproduzca")]
     [SerializeField] private bool randomPitchOnPlay = true;
 
-    private AudioSource audioSource;
+    public AudioSource audioSource;
 
     private void Awake()
     {
