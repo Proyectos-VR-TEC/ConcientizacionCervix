@@ -20,7 +20,7 @@ public class TriviaManager : MonoBehaviour
     [SerializeField] private AudioClip currentCorrectAudioClip;
     [SerializeField] private AudioClip currentIncorrectAudioClip;
 
-    [SerializeField] private TextMeshProUGUI[] currentAnswerOptions;
+    [SerializeField] private string[] currentAnswerOptions;
 
     [Header("Panel de la UI de trivia")]
     public GameObject triviaPanel;
@@ -40,7 +40,7 @@ public class TriviaManager : MonoBehaviour
     /// <param name="correctClip">El AudioClip que se reproduce cuando la respuesta es correcta.</param>
     /// <param name="incorrectClip">El AudioClip que se reproduce cuando la respuesta es incorrecta.</param>
     /// <param name="answerOptions">Los TextMesh que muestran las opciones de respuesta.</param>
-    public void StartTrivia(int correctValue, AudioClip correctClip, AudioClip incorrectClip, TextMeshProUGUI[] answerOptions)
+    public void StartTrivia(int correctValue, AudioClip correctClip, AudioClip incorrectClip, string[] answerOptions)
     {
         currentCorrectValue = correctValue;
         currentCorrectAudioClip = correctClip;
@@ -62,7 +62,7 @@ public class TriviaManager : MonoBehaviour
             {
                 if (i < currentAnswerOptions.Length)
                 {
-                    buttonTexts[i].text = currentAnswerOptions[i].text;
+                    buttonTexts[i].text = currentAnswerOptions[i];
                 }
                 else
                 {

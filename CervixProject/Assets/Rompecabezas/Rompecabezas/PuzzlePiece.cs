@@ -9,7 +9,7 @@ public class PuzzlePiece : MonoBehaviour
     [Header("Valor correcto")]
     public int correctAnswerValue;
          
-    public TextMeshProUGUI[] answerOptions;
+    public string[] answerOptions;
     public AudioClip correctClip;
     public AudioClip incorrectClip;
 
