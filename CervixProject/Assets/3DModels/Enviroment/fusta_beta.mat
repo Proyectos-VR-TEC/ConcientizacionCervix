@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-1662056507843479846
+--- !u!114 &-4138454100887684121
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,12 +20,12 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: aiStandardSurface1SG 2
-  m_Shader: {fileID: -6465566751694194690, guid: b9d29dfa1474148e792ac720cbd45122, type: 3}
+  m_Name: fusta_beta
+  m_Shader: {fileID: -6465566751694194690, guid: c18c97ae1ce021b4980c5d19a54f0d3c, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _OCCLUSION
+  - _CLEARCOAT
   m_InvalidKeywords: []
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
@@ -40,24 +40,36 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - baseColorTexture:
+    - _PBRmetallicroughnessadvanced_2d82b8f2c2ed4d4ca637330d4d181e38_ClearcoatNormalTexture_452824629_Texture2D:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - baseColorTexture:
+        m_Texture: {fileID: -5390149515647955136, guid: e122593f33ca5724396c61684ca7e721, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - clearcoatRoughnessTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 0, y: 0}
+        m_Offset: {x: 0, y: 0}
+    - clearcoatTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 0, y: 0}
         m_Offset: {x: 0, y: 0}
     - emissiveTexture:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - metallicRoughnessTexture:
-        m_Texture: {fileID: -5390149515647955136, guid: 6beae16d075b2654da9fedd102ba819a, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - normalTexture:
-        m_Texture: {fileID: -8333767756695452246, guid: 6beae16d075b2654da9fedd102ba819a, type: 3}
+        m_Texture: {fileID: -8333767756695452246, guid: e122593f33ca5724396c61684ca7e721, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - occlusionTexture:
-        m_Texture: {fileID: -5390149515647955136, guid: 6beae16d075b2654da9fedd102ba819a, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - transmissionTexture:
@@ -92,7 +104,7 @@ Material:
     - _BUILTIN_ZWrite: 1
     - _BUILTIN_ZWriteControl: 0
     - _Blend: 0
-    - _BlendModePreserveSpecular: 0
+    - _BlendModePreserveSpecular: 1
     - _CastShadows: 1
     - _Cull: 0
     - _DstBlend: 0
@@ -109,27 +121,33 @@ Material:
     - _ZWriteControl: 0
     - alphaCutoff: 0
     - baseColorTexture_texCoord: 0
+    - clearcoatFactor: 0.598425
+    - clearcoatRoughnessFactor: 0.061391413
+    - clearcoatRoughnessTexture_texCoord: 0
+    - clearcoatTexture_texCoord: 0
     - emissiveExposureWeight: 0
     - emissiveTexture_texCoord: 0
-    - metallicFactor: 1
+    - metallicFactor: 0
     - metallicRoughnessTexture_texCoord: 0
     - normalTexture_scale: 1
     - normalTexture_texCoord: 0
     - occlusionTexture_strength: 1
     - occlusionTexture_texCoord: 0
-    - roughnessFactor: 1
+    - roughnessFactor: 0.2
     - transmissionFactor: 0
     m_Colors:
-    - baseColorFactor: {r: 0.9529412, g: 0.75942653, b: 0.6156863, a: 1}
+    - baseColorFactor: {r: 1, g: 1, b: 1, a: 1}
     - baseColorTexture_Rotation: {r: 0, g: 0, b: 0, a: 0}
-    - emissiveFactor: {r: 0, g: 0, b: 0, a: 1}
+    - clearcoatRoughnessTexture_Rotation: {r: 0, g: 0, b: 0, a: 0}
+    - clearcoatTexture_Rotation: {r: 0, g: 0, b: 0, a: 0}
+    - emissiveFactor: {r: 1, g: 1, b: 1, a: 1}
     - emissiveTexture_Rotation: {r: 0, g: 0, b: 0, a: 0}
     - metallicRoughnessTexture_Rotation: {r: 0, g: 0, b: 0, a: 0}
     - normalTexture_Rotation: {r: 0, g: 0, b: 0, a: 0}
     - occlusionTexture_Rotation: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &4098164059449061478
+--- !u!114 &4275051025441663305
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
