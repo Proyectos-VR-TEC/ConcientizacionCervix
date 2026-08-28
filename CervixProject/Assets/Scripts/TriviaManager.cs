@@ -62,6 +62,7 @@ public class TriviaManager : MonoBehaviour
     {
         if (currentCorrectAudioClip != null)
         {
+            audioSource.Stop(); // Detener cualquier audio que se esté reproduciendo
             audioSource.PlayOneShot(currentCorrectAudioClip);
         }
     }
@@ -70,6 +71,7 @@ public class TriviaManager : MonoBehaviour
     {
         if (currentIncorrectAudioClip != null)
         {
+            audioSource.Stop(); // Detener cualquier audio que se esté reproduciendo
             audioSource.PlayOneShot(currentIncorrectAudioClip);
         }
     }

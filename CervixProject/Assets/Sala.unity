@@ -669,6 +669,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzlePiece
   correctAnswerValue: 2
+  correctClip: {fileID: 0}
+  incorrectClip: {fileID: 0}
 --- !u!114 &80128649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6557,6 +6559,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzlePiece
   correctAnswerValue: 3
+  correctClip: {fileID: 0}
+  incorrectClip: {fileID: 0}
 --- !u!114 &797614844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8795,6 +8799,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzlePiece
   correctAnswerValue: 1
+  correctClip: {fileID: 0}
+  incorrectClip: {fileID: 0}
 --- !u!114 &1196525149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10048,6 +10054,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzlePiece
   correctAnswerValue: 1
+  correctClip: {fileID: 0}
+  incorrectClip: {fileID: 0}
 --- !u!82 &1346983228
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10548,6 +10556,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzlePiece
   correctAnswerValue: 3
+  correctClip: {fileID: 0}
+  incorrectClip: {fileID: 0}
 --- !u!114 &1358939581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12539,6 +12549,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TriviaManager
   currentCorrectValue: 0
+  audioSource: {fileID: 1367349752}
+  currentCorrectAudioClip: {fileID: 0}
+  currentIncorrectAudioClip: {fileID: 0}
   triviaPanel: {fileID: 1148145645}
   grabInteractables:
   - {fileID: 1196525143}
@@ -15668,6 +15681,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzlePiece
   correctAnswerValue: 2
+  correctClip: {fileID: 0}
+  incorrectClip: {fileID: 0}
 --- !u!114 &2065947253
 MonoBehaviour:
   m_ObjectHideFlags: 0
