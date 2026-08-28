@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class PuzzlePiece : MonoBehaviour
 {
@@ -7,7 +8,8 @@ public class PuzzlePiece : MonoBehaviour
     private Rigidbody rb;
     [Header("Valor correcto")]
     public int correctAnswerValue;
-
+         
+    public TextMeshProUGUI[] answerOptions;
     public AudioClip correctClip;
     public AudioClip incorrectClip;
 

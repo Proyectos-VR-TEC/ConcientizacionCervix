@@ -118,7 +118,9 @@ public class PuzzleSlot : MonoBehaviour
             triviaManager.StartTrivia(
                 targetPiece.GetComponent<PuzzlePiece>().correctAnswerValue, 
                 targetPiece.GetComponent<PuzzlePiece>().correctClip, 
-                targetPiece.GetComponent<PuzzlePiece>().incorrectClip);
+                targetPiece.GetComponent<PuzzlePiece>().incorrectClip,
+                targetPiece.GetComponent<PuzzlePiece>().answerOptions
+            );
 
             // Desactivar los XRGrabInteractables de las piezas
             foreach (var grabInteractable in grabInteractables)

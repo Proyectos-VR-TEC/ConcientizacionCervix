@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
+using TMPro;
 
 /// <summary>
 /// Controla el mini-juego de trivia asociado a cada pieza del rompecabezas.
@@ -19,6 +20,8 @@ public class TriviaManager : MonoBehaviour
     [SerializeField] private AudioClip currentCorrectAudioClip;
     [SerializeField] private AudioClip currentIncorrectAudioClip;
 
+    [SerializeField] private TextMeshProUGUI[] currentAnswerOptions;
+
     [Header("Panel de la UI de trivia")]
     public GameObject triviaPanel;
 
@@ -27,6 +30,8 @@ public class TriviaManager : MonoBehaviour
     
     [Header("Simple interactables de los botones")]
     public XRSimpleInteractable[] simpleInteractables;
+    [Header("Texto de Botones")]
+    public TextMeshProUGUI[] buttonTexts;
 
     /// <summary>
     /// Llamar esto desde la pieza cuando se coloca en su lugar correcto.
@@ -34,15 +39,36 @@ public class TriviaManager : MonoBehaviour
     /// <param name="correctValue">El INT correcto que debe coincidir con el botón.</param>
     /// <param name="correctClip">El AudioClip que se reproduce cuando la respuesta es correcta.</param>
     /// <param name="incorrectClip">El AudioClip que se reproduce cuando la respuesta es incorrecta.</param>
-    public void StartTrivia(int correctValue, AudioClip correctClip, AudioClip incorrectClip)
+    /// <param name="answerOptions">Los TextMesh que muestran las opciones de respuesta.</param>
+    public void StartTrivia(int correctValue, AudioClip correctClip, AudioClip incorrectClip, TextMeshProUGUI[] answerOptions)
     {
         currentCorrectValue = correctValue;
         currentCorrectAudioClip = correctClip;
         currentIncorrectAudioClip = incorrectClip;
+        currentAnswerOptions = answerOptions;
 
+        AsignarTextos();
         if (triviaPanel != null)
         {
             triviaPanel.SetActive(true);
+        }
+    }
+
+    private void AsignarTextos()
+    {
+        if (currentAnswerOptions != null && buttonTexts != null)
+        {
+            for (int i = 0; i < buttonTexts.Length; i++)
+            {
+                if (i < currentAnswerOptions.Length)
+                {
+                    buttonTexts[i].text = currentAnswerOptions[i].text;
+                }
+                else
+                {
+                    buttonTexts[i].text = ""; // Si no hay suficiente texto, dejar vacío
+                }
+            }
         }
     }
 
