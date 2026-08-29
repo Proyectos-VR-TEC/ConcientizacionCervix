@@ -17,10 +17,8 @@ public class PieceHover : MonoBehaviour
     public void OnHoverEnter()
     {
         meshRenderer.material.color = hoverColor;
-        if (hoverSound != null && !hoverSound.isPlaying)
-        {
-            hoverSound.Play();
-        }
+        hoverSound.Play();
+
     }
 
     public void OnHoverExit()
