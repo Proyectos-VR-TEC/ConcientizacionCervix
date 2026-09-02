@@ -1,10 +1,17 @@
 using UnityEngine;
+using TMPro;
 
 public class PuzzlePiece : MonoBehaviour
 {
     private Vector3 initialPosition;
     private Quaternion initialRotation;
     private Rigidbody rb;
+    [Header("Valor correcto")]
+    public int correctAnswerValue;
+         
+    public string[] answerOptions;
+    public AudioClip correctClip;
+    public AudioClip incorrectClip;
 
     void Start()
     {

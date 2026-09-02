@@ -9,8 +9,13 @@ public class PuzzleSlot : MonoBehaviour
     public float snapDistance = 0.15f;
     public AudioClip snapSound;
     public AudioClip locucionClip;
+    public AudioClip closingSound;
     public float locucionDelay = 0.5f;
     public GameObject slotFantasma;
+
+    public TriviaManager triviaManager; // Referencia al TriviaManager
+
+    public XRGrabInteractable[] grabInteractables; // Array para almacenar los XRGrabInteractables de las piezas
 
     private AudioSource audioSource;
     private bool isCompleted = false;
@@ -21,9 +26,10 @@ public class PuzzleSlot : MonoBehaviour
     public float fadeDuration = 1f;
     private Vector3 initialPosition;
     private Quaternion initialRotation;
-    public float maxDistance = 2f; // distancia máxima antes de regresar
+    public float maxDistance = 2f; // distancia mï¿½xima antes de regresar
     public float rotationSnapDistance = 0.5f; // distancia para empezar a rotar
-    public float rotationSpeed = 5f; // velocidad de rotación
+    public float rotationSpeed = 5f; // velocidad de rotaciï¿½n
+    private bool isHovering = true;
 
 
     private CanvasGroup infoPanelCanvasGroup;
@@ -55,7 +61,7 @@ public class PuzzleSlot : MonoBehaviour
     {
         if (isCompleted) return;
 
-        // Rotación suave cuando está cerca del slot
+        // Rotaciï¿½n suave cuando estï¿½ cerca del slot
         if (pieceGrab.isSelected)
         {
             float dist = Vector3.Distance(targetPiece.transform.position, transform.position);
@@ -67,10 +73,15 @@ public class PuzzleSlot : MonoBehaviour
                     transform.rotation,
                     Time.deltaTime * rotationSpeed
                 );
+                if (isHovering && closingSound != null)
+                {
+                    audioSource.PlayOneShot(closingSound);
+                    isHovering = false;
+                }
             }
         }
 
-        // No hacer snap si el usuario la está agarrando
+        // No hacer snap si el usuario la estï¿½ agarrando
         if (pieceGrab.isSelected) return;
 
         // Regresar pieza si se fue muy lejos
@@ -84,6 +95,7 @@ public class PuzzleSlot : MonoBehaviour
                 pieceRb.linearVelocity = Vector3.zero;
                 pieceRb.angularVelocity = Vector3.zero;
             }
+            isHovering = true;
         }
 
         Vector3 pieceCenter = targetPiece.GetComponentInChildren<MeshRenderer>().bounds.center;
@@ -91,17 +103,30 @@ public class PuzzleSlot : MonoBehaviour
         float distance = Vector3.Distance(pieceCenter, slotCenter);
         if (distance < snapDistance)
         {
-            // Primero desactivar física
+            // Primero desactivar fï¿½sica
             pieceRb.linearVelocity = Vector3.zero;
             pieceRb.angularVelocity = Vector3.zero;
             pieceRb.isKinematic = true;
 
-            // Luego mover a posición exacta
+            // Luego mover a posiciï¿½n exacta
             targetPiece.transform.position = transform.position;
             targetPiece.transform.rotation = transform.rotation;
 
             // Desactivar grab
+            pieceGrab.interactionLayers = 0;
             pieceGrab.enabled = false;
+            triviaManager.StartTrivia(
+                targetPiece.GetComponent<PuzzlePiece>().correctAnswerValue, 
+                targetPiece.GetComponent<PuzzlePiece>().correctClip, 
+                targetPiece.GetComponent<PuzzlePiece>().incorrectClip,
+                targetPiece.GetComponent<PuzzlePiece>().answerOptions
+            );
+
+            // Desactivar los XRGrabInteractables de las piezas
+            foreach (var grabInteractable in grabInteractables)
+            {
+                grabInteractable.enabled = false;
+            }
 
             // Sonido
             if (snapSound != null)
@@ -117,7 +142,7 @@ public class PuzzleSlot : MonoBehaviour
             if (infoPanel != null)
                 PuzzleManager.Instance.ShowPanel(infoPanel, infoPanelCanvasGroup, audioSource, locucionClip, locucionDelay, infoPanelDuration, fadeDuration);
 
-            Debug.Log("¡Pieza colocada!");
+            Debug.Log("ï¿½Pieza colocada!");
         }
     }
 
