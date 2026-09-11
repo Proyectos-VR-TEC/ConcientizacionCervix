@@ -47,6 +47,7 @@ public class UIAnimatePop : MonoBehaviour
     /// <summary>
     /// Animación de aparecer (pop in)
     /// </summary>
+    [ContextMenu("POP IN")]
     private IEnumerator AnimarAparecer()
     {
         estaAnimando = true;
@@ -104,6 +105,7 @@ public class UIAnimatePop : MonoBehaviour
     /// <summary>
     /// Animación de desaparecer (pop out) - Llamar desde otro script
     /// </summary>
+    [ContextMenu("POP OUT")]
     public void PopOut()
     {
         if (estaAnimando)
