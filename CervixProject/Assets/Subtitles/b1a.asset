@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bae7502b6c74aae4bae746ce515d869d, type: 3}
+  m_Name: b1a
+  m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
+  subtitle:
+    speaker: Tami
+    message: "Est\xE1s aqu\xED para aprender sobre el c\xE1ncer de c\xE9rvix, una
+      enfermedad com\xFAn, prevenible, y de la que casi no se habla."
+    duration: 7.5
