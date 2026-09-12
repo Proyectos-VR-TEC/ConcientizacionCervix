@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bae7502b6c74aae4bae746ce515d869d, type: 3}
+  m_Name: b4a
+  m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
+  subtitle:
+    speaker: Tami
+    message: "El VPH es la principal causa. Es un virus de transmisi\xF3n sexual
+      muy com\xFAn. La mayor\xEDa de personas sexualmente activas lo tendr\xE1 en
+      alg\xFAn momento, sin saberlo."
+    duration: 12
