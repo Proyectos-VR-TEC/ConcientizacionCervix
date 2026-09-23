@@ -12,10 +12,11 @@ public class PuzzleSlot : MonoBehaviour
     public AudioClip closingSound;
     public float locucionDelay = 0.5f;
     public GameObject slotFantasma;
+    public int pieceNumber; 
 
-    public TriviaManager triviaManager; // Referencia al TriviaManager
+    public TriviaManager triviaManager;
 
-    public XRGrabInteractable[] grabInteractables; // Array para almacenar los XRGrabInteractables de las piezas
+    public XRGrabInteractable[] grabInteractables;
 
     private AudioSource audioSource;
     private bool isCompleted = false;
@@ -26,23 +27,28 @@ public class PuzzleSlot : MonoBehaviour
     public float fadeDuration = 1f;
     private Vector3 initialPosition;
     private Quaternion initialRotation;
-    public float maxDistance = 2f; // distancia m�xima antes de regresar
-    public float rotationSnapDistance = 0.5f; // distancia para empezar a rotar
-    public float rotationSpeed = 5f; // velocidad de rotaci�n
+    public float maxDistance = 2f;
+    public float rotationSnapDistance = 0.5f;
+    public float rotationSpeed = 5f;
     private bool isHovering = true;
-
 
     private CanvasGroup infoPanelCanvasGroup;
 
+    // ============================================
+    // NUEVAS VARIABLES AÑADIDAS
+    // ============================================
+    [Header("Respuesta de Info Panel")]
+    [Tooltip("Panel que se mostrará cuando showInfoPanelResponse sea true")]
+    public GameObject InfoPanelResponse;
+
     void Start()
     {
-
         if (infoPanel != null)
             infoPanelCanvasGroup = infoPanel.GetComponent<CanvasGroup>();
+        
         audioSource = gameObject.AddComponent<AudioSource>();
         pieceRb = targetPiece.GetComponent<Rigidbody>();
         pieceGrab = targetPiece.GetComponentInChildren<XRGrabInteractable>();
-
 
         if (slotFantasma != null)
             slotFantasma.GetComponentInChildren<MeshRenderer>().enabled = false;
@@ -52,18 +58,44 @@ public class PuzzleSlot : MonoBehaviour
 
         initialPosition = targetPiece.transform.position;
         initialRotation = targetPiece.transform.rotation;
-
-
-
     }
 
     void Update()
     {
+        // ============================================
+        // VERIFICACIÓN DEL PANEL DE RESPUESTA
+        // ============================================
+        // Solo mostramos el panel si:
+        // 2. El pieceNumber del slot coincide con el de la pieza (targetPiece)
+        // 3. El panel aún no se ha mostrado (para no repetir)
+        if (triviaManager.answered)
+        {
+            int pieceNumberDeLaPieza = targetPiece.GetComponent<PuzzlePiece>().numPiece;
+
+            if (pieceNumberDeLaPieza == pieceNumber)
+            {
+                if (InfoPanelResponse != null)
+                {
+                    MostrarPanelRespuesta();
+
+                    // Opcional: iniciar un temporizador para ocultarlo después de un tiempo
+                    // StartCoroutine(OCultarPanelRespuestaDespuesDeTiempo());
+                }
+            }
+            else
+            {
+                Debug.Log($"PuzzleSlot {pieceNumber}: El pieceNumber de la pieza ({pieceNumberDeLaPieza}) no coincide con el del slot ({pieceNumber}). No se muestra el panel.");
+            }
+        }
+
+        // ============================================
+        // LÓGICA ORIGINAL DEL UPDATE
+        // ============================================
         if (isCompleted) return;
 
-        // Rotaci�n suave cuando est� cerca del slot
         if (pieceGrab.isSelected)
         {
+            triviaManager.answered = false; // Resetear la respuesta cuando la pieza es agarrada
             float dist = Vector3.Distance(targetPiece.transform.position, transform.position);
             if (dist < rotationSnapDistance)
             {
@@ -81,10 +113,8 @@ public class PuzzleSlot : MonoBehaviour
             }
         }
 
-        // No hacer snap si el usuario la est� agarrando
         if (pieceGrab.isSelected) return;
 
-        // Regresar pieza si se fue muy lejos
         if (!pieceGrab.isSelected)
         {
             float distFromOrigin = Vector3.Distance(targetPiece.transform.position, initialPosition);
@@ -103,49 +133,54 @@ public class PuzzleSlot : MonoBehaviour
         float distance = Vector3.Distance(pieceCenter, slotCenter);
         if (distance < snapDistance)
         {
-            // Primero desactivar f�sica
             pieceRb.linearVelocity = Vector3.zero;
             pieceRb.angularVelocity = Vector3.zero;
             pieceRb.isKinematic = true;
 
-            // Luego mover a posici�n exacta
             targetPiece.transform.position = transform.position;
             targetPiece.transform.rotation = transform.rotation;
 
-            // Desactivar grab
             pieceGrab.interactionLayers = 0;
             pieceGrab.enabled = false;
+            
             triviaManager.StartTrivia(
                 targetPiece.GetComponent<PuzzlePiece>().correctAnswerValue, 
                 targetPiece.GetComponent<PuzzlePiece>().correctClip, 
                 targetPiece.GetComponent<PuzzlePiece>().incorrectClip,
-                targetPiece.GetComponent<PuzzlePiece>().answerOptions
+                targetPiece.GetComponent<PuzzlePiece>().answerOptions,
+                targetPiece.GetComponent<PuzzlePiece>().numPiece
             );
 
-            // Desactivar los XRGrabInteractables de las piezas
             foreach (var grabInteractable in grabInteractables)
             {
                 grabInteractable.enabled = false;
             }
 
-            // Sonido
             if (snapSound != null)
                 audioSource.PlayOneShot(snapSound);
 
             isCompleted = true;
             PuzzleManager.Instance.PiezaColocada();
 
-
-            // Ocultar el slot fantasma
             GetComponentInChildren<MeshRenderer>().enabled = false;
 
             if (infoPanel != null)
                 PuzzleManager.Instance.ShowPanel(infoPanel, infoPanelCanvasGroup, audioSource, locucionClip, locucionDelay, infoPanelDuration, fadeDuration);
 
-            Debug.Log("�Pieza colocada!");
+            Debug.Log("¡Pieza colocada!");
         }
     }
 
+    /// <summary>
+    /// Método alternativo que activa directamente el panel (por si lo prefieres)
+    /// </summary>
+    public void MostrarPanelRespuesta()
+    {
+        if (InfoPanelResponse != null)
+            InfoPanelResponse.SetActive(true);
+    }
+
+    // ============================================
 
     void OnPieceGrabbed(SelectEnterEventArgs args)
     {
@@ -158,6 +193,4 @@ public class PuzzleSlot : MonoBehaviour
         if (!isCompleted && slotFantasma != null)
             slotFantasma.GetComponentInChildren<MeshRenderer>().enabled = false;
     }
-    
-
 }

@@ -14,6 +14,9 @@ public class TriviaManager : MonoBehaviour
     [Header("Valor correcto de la pieza actualmente en trivia")]
     [SerializeField] private int currentCorrectValue;
     public int CurrentCorrectValue => currentCorrectValue;
+    [SerializeField] private int currentNumPiece;
+    public int CurrentNumPiece => currentNumPiece;
+    public bool answered;
 
     public AudioSource audioSource;
 
@@ -40,12 +43,14 @@ public class TriviaManager : MonoBehaviour
     /// <param name="correctClip">El AudioClip que se reproduce cuando la respuesta es correcta.</param>
     /// <param name="incorrectClip">El AudioClip que se reproduce cuando la respuesta es incorrecta.</param>
     /// <param name="answerOptions">Los TextMesh que muestran las opciones de respuesta.</param>
-    public void StartTrivia(int correctValue, AudioClip correctClip, AudioClip incorrectClip, string[] answerOptions)
+    /// <param name="numPiece">El número de la pieza actual.</param>
+    public void StartTrivia(int correctValue, AudioClip correctClip, AudioClip incorrectClip, string[] answerOptions, int numPiece)
     {
         currentCorrectValue = correctValue;
         currentCorrectAudioClip = correctClip;
         currentIncorrectAudioClip = incorrectClip;
         currentAnswerOptions = answerOptions;
+        currentNumPiece = numPiece;
 
         AsignarTextos();
         if (triviaPanel != null)
@@ -132,5 +137,16 @@ public class TriviaManager : MonoBehaviour
         {
             simpleInteractable.enabled = false;
         }
+    }
+
+    // Metodo para cambiar valor de answered a true, para que el panel de respuesta se muestre
+    public void SetAnsweredTrue()
+    {
+        answered = true;
+    }
+
+    public void SetAnsweredFalse()
+    {
+        answered = false;
     }
 }

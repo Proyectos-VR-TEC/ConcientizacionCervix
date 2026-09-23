@@ -31,7 +31,7 @@ public class TriviaButton : MonoBehaviour
         }
 
         int correctValue = triviaManager.CurrentCorrectValue;
-
+        triviaManager.answered = true; // Marcar que se ha respondido
         if (buttonValue == correctValue)
         {
             onCorrectAnswer.Invoke();
