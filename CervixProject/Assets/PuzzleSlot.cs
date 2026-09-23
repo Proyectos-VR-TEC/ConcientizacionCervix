@@ -41,6 +41,8 @@ public class PuzzleSlot : MonoBehaviour
     [Tooltip("Panel que se mostrará cuando showInfoPanelResponse sea true")]
     public GameObject InfoPanelResponse;
 
+    public ActivarComponente allPanels; // Referencia al script ActivarComponente que controla todos los paneles
+
     void Start()
     {
         if (infoPanel != null)
@@ -78,8 +80,7 @@ public class PuzzleSlot : MonoBehaviour
                 {
                     MostrarPanelRespuesta();
 
-                    // Opcional: iniciar un temporizador para ocultarlo después de un tiempo
-                    // StartCoroutine(OCultarPanelRespuestaDespuesDeTiempo());
+                    allPanels.DesactivarObjetosConDelay(infoPanelDuration);
                 }
             }
             else

@@ -38,6 +38,8 @@ public class TriviaManager : MonoBehaviour
     public TextMeshProUGUI[] buttonTexts;
     [Header("Animators de botones")]
     public Animator[] buttonAnimators;
+    [Header("Panel respuestas")]
+    public GameObject[] paneles;
 
     /// <summary>
     /// Llamar esto desde la pieza cuando se coloca en su lugar correcto.
