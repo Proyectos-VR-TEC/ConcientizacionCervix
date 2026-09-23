@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using TMPro;
+using System.Collections;
 
 /// <summary>
 /// Controla el mini-juego de trivia asociado a cada pieza del rompecabezas.
@@ -35,6 +36,8 @@ public class TriviaManager : MonoBehaviour
     public XRSimpleInteractable[] simpleInteractables;
     [Header("Texto de Botones")]
     public TextMeshProUGUI[] buttonTexts;
+    [Header("Animators de botones")]
+    public Animator[] buttonAnimators;
 
     /// <summary>
     /// Llamar esto desde la pieza cuando se coloca en su lugar correcto.
@@ -148,5 +151,40 @@ public class TriviaManager : MonoBehaviour
     public void SetAnsweredFalse()
     {
         answered = false;
+    }
+
+    // reproduce una animación con 1 segundo de delay para que el usuario pueda ver la respuesta correcta antes de cerrar el panel
+    public void playBtn(string animaionName)
+    {
+        StartCoroutine(PlayBtn1Coroutine(animaionName));
+    }
+
+    private IEnumerator PlayBtn1Coroutine(string animationName)
+    {
+        yield return new WaitForSeconds(0.1f);
+        switch (animationName)
+        {
+            case "button1Correct":
+                if (buttonAnimators.Length > 0 && buttonAnimators[0] != null)
+                {
+                    buttonAnimators[0].Play("button1Correct");
+                }
+                break;
+            case "button2Correct":
+                if (buttonAnimators.Length > 1 && buttonAnimators[1] != null)
+                {
+                    buttonAnimators[1].Play("button2Correct");
+                }
+                break;
+            case "button3Correct":
+                if (buttonAnimators.Length > 0 && buttonAnimators[0] != null)
+                {
+                    buttonAnimators[2].Play("button3Correct");
+                }
+                break;
+            default:
+                Debug.LogWarning($"TriviaManager: Animación '{animationName}' no reconocida.");
+                break;
+        }
     }
 }

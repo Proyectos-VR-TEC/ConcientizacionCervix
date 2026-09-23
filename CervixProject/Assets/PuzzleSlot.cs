@@ -70,7 +70,7 @@ public class PuzzleSlot : MonoBehaviour
         // 3. El panel aún no se ha mostrado (para no repetir)
         if (triviaManager.answered)
         {
-            int pieceNumberDeLaPieza = targetPiece.GetComponent<PuzzlePiece>().numPiece;
+            int pieceNumberDeLaPieza = triviaManager.CurrentNumPiece;
 
             if (pieceNumberDeLaPieza == pieceNumber)
             {
