@@ -81,6 +81,7 @@ public class PuzzleSlot : MonoBehaviour
                     MostrarPanelRespuesta();
 
                     allPanels.DesactivarObjetosConDelay(infoPanelDuration);
+                    triviaManager.answered = false; // Resetear la respuesta para que no se muestre el panel nuevamente
                 }
             }
             else
