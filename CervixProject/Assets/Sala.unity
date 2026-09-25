@@ -6086,7 +6086,7 @@ MonoBehaviour:
         m_MethodName: PlayOneShot
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 7075afd8e5b45084f9e852ff3fb1d7a5, type: 3}
+          m_ObjectArgument: {fileID: 8300000, guid: 2d8318eb86f70ed46b3b7a5e0b501122, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -13981,7 +13981,7 @@ MonoBehaviour:
         m_MethodName: PlayOneShot
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 989a779b454c44e41b8d5875e6a62305, type: 3}
+          m_ObjectArgument: {fileID: 8300000, guid: ac8eb3b0f245b75429435089c7f8e8ed, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -21182,10 +21182,8 @@ MonoBehaviour:
   escalaFinal: {x: 0.2743782, y: 0.08776536, z: 0.27437824}
   duracion: 1
   curva:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 0
@@ -21193,8 +21191,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.43572798
+    - time: 0.43572798
       value: 0.7025721
       inSlope: 1.4904506
       outSlope: 1.4904506
@@ -21202,8 +21199,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
+    - time: 1
       value: 1
       inSlope: 0
       outSlope: 0
@@ -21216,6 +21212,9 @@ MonoBehaviour:
     m_RotationOrder: 4
   autoStart: 0
   pingPong: 0
+  tiempoActual: 0
+  animando: 0
+  yendoHaciaFinal: 1
 --- !u!114 &568085449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21232,10 +21231,8 @@ MonoBehaviour:
   escalaFinal: {x: 0.23102, y: 0.07389637, z: 0.23102003}
   duracion: 1
   curva:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 0
@@ -21243,8 +21240,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.30286455
+    - time: 0.30286455
       value: 0.5942445
       inSlope: 1.485771
       outSlope: 1.485771
@@ -21252,8 +21248,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
+    - time: 1
       value: 1
       inSlope: 0
       outSlope: 0
@@ -21266,6 +21261,9 @@ MonoBehaviour:
     m_RotationOrder: 4
   autoStart: 0
   pingPong: 0
+  tiempoActual: 0
+  animando: 0
+  yendoHaciaFinal: 1
 --- !u!1 &597563779
 GameObject:
   m_ObjectHideFlags: 0
@@ -21845,7 +21843,7 @@ MonoBehaviour:
         m_MethodName: PlayOneShot
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: d864b4a83a1f3eb4095a089f6d8e14af, type: 3}
+          m_ObjectArgument: {fileID: 8300000, guid: 0b1f6a68a7807824b807bb3a91a42b80, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -45513,7 +45511,7 @@ MonoBehaviour:
         m_MethodName: PlayOneShot
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: da3268d865a3d23418a008033bad8601, type: 3}
+          m_ObjectArgument: {fileID: 8300000, guid: 295c8c977475f7e4c8e249e31c64794c, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -53769,7 +53767,7 @@ MonoBehaviour:
         m_MethodName: PlayOneShot
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: d6995c296a4bf0647832d6922f7ba0b6, type: 3}
+          m_ObjectArgument: {fileID: 8300000, guid: 2d6c61104639a1a4ea76cc442ba5bbbf, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
