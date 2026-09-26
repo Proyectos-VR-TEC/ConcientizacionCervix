@@ -20693,6 +20693,30 @@ MonoBehaviour:
           m_StringArgument: button3Correct
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 568085447}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 2
+          m_StringArgument: disappear
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1367992025}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 2
+          m_StringArgument: disappear
+          m_BoolArgument: 0
+        m_CallState: 2
   triviaManager: {fileID: 1667290818}
 --- !u!114 &561498800
 MonoBehaviour:
@@ -21338,6 +21362,30 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 2
           m_StringArgument: button1Correct
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1367992025}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 2
+          m_StringArgument: disappear
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 561498801}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 2
+          m_StringArgument: disappear
           m_BoolArgument: 0
         m_CallState: 2
   triviaManager: {fileID: 1667290818}
@@ -25261,23 +25309,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 356454735739961642, guid: 28e3f9cbfee3f29498e25f21c44ae41a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.0016366896
+      value: 0.0027603633
       objectReference: {fileID: 0}
     - target: {fileID: 356454735739961642, guid: 28e3f9cbfee3f29498e25f21c44ae41a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.0054186
+      value: 0.004477034
       objectReference: {fileID: 0}
     - target: {fileID: 356454735739961642, guid: 28e3f9cbfee3f29498e25f21c44ae41a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.000000028965
+      value: 0.00000001671
       objectReference: {fileID: 0}
     - target: {fileID: 356454735739961642, guid: 28e3f9cbfee3f29498e25f21c44ae41a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.0056762695
+      value: -0.00033569336
       objectReference: {fileID: 0}
     - target: {fileID: 356454735739961642, guid: 28e3f9cbfee3f29498e25f21c44ae41a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.00064849854
+      value: -0.00074005127
       objectReference: {fileID: 0}
     - target: {fileID: 410848129033148905, guid: 28e3f9cbfee3f29498e25f21c44ae41a, type: 3}
       propertyPath: m_IsActive
@@ -25294,7 +25342,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 585546899855886004, guid: 28e3f9cbfee3f29498e25f21c44ae41a, type: 3}
       propertyPath: m_margin.z
-      value: -187.73694
+      value: -260.4893
       objectReference: {fileID: 0}
     - target: {fileID: 585546899855886004, guid: 28e3f9cbfee3f29498e25f21c44ae41a, type: 3}
       propertyPath: m_fontAsset
@@ -25306,7 +25354,7 @@ PrefabInstance:
       objectReference: {fileID: 360784455861186305, guid: 6c5eb7404b64e0849ae0d4251a9132f6, type: 2}
     - target: {fileID: 585546899855886004, guid: 28e3f9cbfee3f29498e25f21c44ae41a, type: 3}
       propertyPath: m_HorizontalAlignment
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 585546899855886004, guid: 28e3f9cbfee3f29498e25f21c44ae41a, type: 3}
       propertyPath: m_hasFontAssetChanged
@@ -25322,15 +25370,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3541924916729739501, guid: 28e3f9cbfee3f29498e25f21c44ae41a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.5615678
+      value: 1.2303123
       objectReference: {fileID: 0}
     - target: {fileID: 3541924916729739501, guid: 28e3f9cbfee3f29498e25f21c44ae41a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.77840203
+      value: 0.8003298
       objectReference: {fileID: 0}
     - target: {fileID: 3541924916729739501, guid: 28e3f9cbfee3f29498e25f21c44ae41a, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.7784021
+      value: 0.61327964
       objectReference: {fileID: 0}
     - target: {fileID: 3541924916729739501, guid: 28e3f9cbfee3f29498e25f21c44ae41a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -25446,7 +25494,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7998310178464661086, guid: 28e3f9cbfee3f29498e25f21c44ae41a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.0491865
+      value: 1.2637103
+      objectReference: {fileID: 0}
+    - target: {fileID: 7998310178464661086, guid: 28e3f9cbfee3f29498e25f21c44ae41a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.89393
+      objectReference: {fileID: 0}
+    - target: {fileID: 7998310178464661086, guid: 28e3f9cbfee3f29498e25f21c44ae41a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.89393
       objectReference: {fileID: 0}
     - target: {fileID: 7998310178464661086, guid: 28e3f9cbfee3f29498e25f21c44ae41a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -25454,7 +25510,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7998310178464661086, guid: 28e3f9cbfee3f29498e25f21c44ae41a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -70
+      value: -130.6
       objectReference: {fileID: 0}
     - target: {fileID: 7998310178464661086, guid: 28e3f9cbfee3f29498e25f21c44ae41a, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -37289,7 +37345,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1148145646
 Transform:
   m_ObjectHideFlags: 0
@@ -45528,6 +45584,30 @@ MonoBehaviour:
           m_StringArgument: button2Correct
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 568085447}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 2
+          m_StringArgument: disappear
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 561498801}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 2
+          m_StringArgument: disappear
+          m_BoolArgument: 0
+        m_CallState: 2
   triviaManager: {fileID: 1667290818}
 --- !u!114 &1367992024
 MonoBehaviour:
@@ -45813,15 +45893,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1378042293}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.00000058114523}
-  m_LocalPosition: {x: 0.476, y: 2.013, z: 0.438}
+  m_LocalRotation: {x: -0, y: 0.9950627, z: -0, w: -0.09924836}
+  m_LocalPosition: {x: 0.47600007, y: 2.013, z: 0.43801016}
   m_LocalScale: {x: 0.3961965, y: 0.3961965, z: 0.3961965}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 827050860}
   - {fileID: 17238969}
   m_Father: {fileID: 702553093}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 191.392, z: 0}
 --- !u!114 &1378042295
 MonoBehaviour:
   m_ObjectHideFlags: 0
