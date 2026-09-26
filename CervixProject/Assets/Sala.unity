@@ -11518,6 +11518,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4340d4a693de7fd4db23fd62ebcab8ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ZonaDecision
+--- !u!1 &197119152 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2603192623656597787, guid: 657c6bc5df231624e8377fe3de5985f4, type: 3}
+  m_PrefabInstance: {fileID: 406927146}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &197119156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197119152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f484905b046ce10488c0745f69573f5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MaterialManager
+  materialSecundario: {fileID: 2100000, guid: 9a2ff4323cfaff74e936e8dc50a8d645, type: 2}
+--- !u!114 &197119157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197119152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f484905b046ce10488c0745f69573f5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MaterialManager
+  materialSecundario: {fileID: 2100000, guid: 4e8dcf6da3aa2914ebf121f762b0948a, type: 2}
 --- !u!1 &201790932
 GameObject:
   m_ObjectHideFlags: 0
@@ -12228,6 +12259,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5064858166413366586, guid: 8451c272b9eecce4b8c4a4036d380326, type: 3}
   m_PrefabInstance: {fileID: 5411162382680143774}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &283924903 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2603192623656597787, guid: 657c6bc5df231624e8377fe3de5985f4, type: 3}
+  m_PrefabInstance: {fileID: 1278864958}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &283924907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283924903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f484905b046ce10488c0745f69573f5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MaterialManager
+  materialSecundario: {fileID: 2100000, guid: 9a2ff4323cfaff74e936e8dc50a8d645, type: 2}
+--- !u!114 &283924908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283924903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f484905b046ce10488c0745f69573f5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MaterialManager
+  materialSecundario: {fileID: 2100000, guid: 4e8dcf6da3aa2914ebf121f762b0948a, type: 2}
 --- !u!1 &287443097
 GameObject:
   m_ObjectHideFlags: 0
@@ -19190,7 +19252,15 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -1084063558550075730, guid: 657c6bc5df231624e8377fe3de5985f4, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -1084063558550075730, guid: 657c6bc5df231624e8377fe3de5985f4, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8d13e0497290a7f448d5bab1e1ffeda4, type: 2}
+    - target: {fileID: -1084063558550075730, guid: 657c6bc5df231624e8377fe3de5985f4, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: 8d13e0497290a7f448d5bab1e1ffeda4, type: 2}
     - target: {fileID: 2774220344278030320, guid: 657c6bc5df231624e8377fe3de5985f4, type: 3}
@@ -19258,6 +19328,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -6689036041284674117, guid: 657c6bc5df231624e8377fe3de5985f4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1756194994}
+    - targetCorrespondingSourceObject: {fileID: 2603192623656597787, guid: 657c6bc5df231624e8377fe3de5985f4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 197119157}
+    - targetCorrespondingSourceObject: {fileID: 2603192623656597787, guid: 657c6bc5df231624e8377fe3de5985f4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 197119156}
   m_SourcePrefab: {fileID: -5645937942226959685, guid: 657c6bc5df231624e8377fe3de5985f4, type: 3}
 --- !u!4 &406927147 stripped
 Transform:
@@ -20530,6 +20606,18 @@ MonoBehaviour:
           m_StringArgument: button3Correct
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 197119157}
+        m_TargetAssemblyTypeName: MaterialManager, Assembly-CSharp
+        m_MethodName: ActivarMaterialSecundario
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 2
+          m_StringArgument: button3Correct
+          m_BoolArgument: 0
+        m_CallState: 2
   onIncorrectAnswer:
     m_PersistentCalls:
       m_Calls:
@@ -20584,6 +20672,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1667290818}
         m_TargetAssemblyTypeName: TriviaManager, Assembly-CSharp
         m_MethodName: PlayIncorrectAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 2
+          m_StringArgument: button3Correct
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 197119156}
+        m_TargetAssemblyTypeName: MaterialManager, Assembly-CSharp
+        m_MethodName: ActivarMaterialSecundario
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -21153,6 +21253,18 @@ MonoBehaviour:
           m_StringArgument: button1Correct
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 770482539}
+        m_TargetAssemblyTypeName: MaterialManager, Assembly-CSharp
+        m_MethodName: ActivarMaterialSecundario
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 2
+          m_StringArgument: button1Correct
+          m_BoolArgument: 0
+        m_CallState: 2
   onIncorrectAnswer:
     m_PersistentCalls:
       m_Calls:
@@ -21207,6 +21319,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1667290818}
         m_TargetAssemblyTypeName: TriviaManager, Assembly-CSharp
         m_MethodName: PlayIncorrectAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 2
+          m_StringArgument: button1Correct
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 770482538}
+        m_TargetAssemblyTypeName: MaterialManager, Assembly-CSharp
+        m_MethodName: ActivarMaterialSecundario
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -24235,6 +24359,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ce5a18f8d3e77246b4406110d78dbde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SubtitlePlayer
+--- !u!1 &770482534 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2603192623656597787, guid: 657c6bc5df231624e8377fe3de5985f4, type: 3}
+  m_PrefabInstance: {fileID: 1544976387}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &770482538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770482534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f484905b046ce10488c0745f69573f5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MaterialManager
+  materialSecundario: {fileID: 2100000, guid: 9a2ff4323cfaff74e936e8dc50a8d645, type: 2}
+--- !u!114 &770482539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770482534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f484905b046ce10488c0745f69573f5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MaterialManager
+  materialSecundario: {fileID: 2100000, guid: 4e8dcf6da3aa2914ebf121f762b0948a, type: 2}
 --- !u!1001 &789332421
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37127,13 +37282,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1148145646}
   - component: {fileID: 1148145647}
+  - component: {fileID: 1148145648}
   m_Layer: 0
   m_Name: Tabs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1148145646
 Transform:
   m_ObjectHideFlags: 0
@@ -37249,6 +37405,94 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: appear3
+          m_BoolArgument: 0
+        m_CallState: 2
+  executeOnlyOnce: 0
+--- !u!114 &1148145648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148145645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0f7fafc6140bdb4a9e8888d25c35a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnActiveStateChanged
+  onBecameActive:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 770482539}
+        m_TargetAssemblyTypeName: MaterialManager, Assembly-CSharp
+        m_MethodName: DesactivarMaterialSecundario
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 770482538}
+        m_TargetAssemblyTypeName: MaterialManager, Assembly-CSharp
+        m_MethodName: DesactivarMaterialSecundario
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 283924908}
+        m_TargetAssemblyTypeName: MaterialManager, Assembly-CSharp
+        m_MethodName: DesactivarMaterialSecundario
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 283924907}
+        m_TargetAssemblyTypeName: MaterialManager, Assembly-CSharp
+        m_MethodName: DesactivarMaterialSecundario
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 197119157}
+        m_TargetAssemblyTypeName: MaterialManager, Assembly-CSharp
+        m_MethodName: DesactivarMaterialSecundario
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 197119156}
+        m_TargetAssemblyTypeName: MaterialManager, Assembly-CSharp
+        m_MethodName: DesactivarMaterialSecundario
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   executeOnlyOnce: 0
@@ -43580,7 +43824,15 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -1084063558550075730, guid: 657c6bc5df231624e8377fe3de5985f4, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -1084063558550075730, guid: 657c6bc5df231624e8377fe3de5985f4, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8d13e0497290a7f448d5bab1e1ffeda4, type: 2}
+    - target: {fileID: -1084063558550075730, guid: 657c6bc5df231624e8377fe3de5985f4, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: 8d13e0497290a7f448d5bab1e1ffeda4, type: 2}
     - target: {fileID: 2774220344278030320, guid: 657c6bc5df231624e8377fe3de5985f4, type: 3}
@@ -43648,6 +43900,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -6689036041284674117, guid: 657c6bc5df231624e8377fe3de5985f4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2048661802}
+    - targetCorrespondingSourceObject: {fileID: 2603192623656597787, guid: 657c6bc5df231624e8377fe3de5985f4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 283924908}
+    - targetCorrespondingSourceObject: {fileID: 2603192623656597787, guid: 657c6bc5df231624e8377fe3de5985f4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 283924907}
   m_SourcePrefab: {fileID: -5645937942226959685, guid: 657c6bc5df231624e8377fe3de5985f4, type: 3}
 --- !u!4 &1278864959 stripped
 Transform:
@@ -45183,6 +45441,18 @@ MonoBehaviour:
           m_StringArgument: button2Correct
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 283924908}
+        m_TargetAssemblyTypeName: MaterialManager, Assembly-CSharp
+        m_MethodName: ActivarMaterialSecundario
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 2
+          m_StringArgument: button2Correct
+          m_BoolArgument: 0
+        m_CallState: 2
   onIncorrectAnswer:
     m_PersistentCalls:
       m_Calls:
@@ -45237,6 +45507,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1667290818}
         m_TargetAssemblyTypeName: TriviaManager, Assembly-CSharp
         m_MethodName: PlayIncorrectAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 2
+          m_StringArgument: button2Correct
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 283924907}
+        m_TargetAssemblyTypeName: MaterialManager, Assembly-CSharp
+        m_MethodName: ActivarMaterialSecundario
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -46701,7 +46983,15 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -1084063558550075730, guid: 657c6bc5df231624e8377fe3de5985f4, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -1084063558550075730, guid: 657c6bc5df231624e8377fe3de5985f4, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8d13e0497290a7f448d5bab1e1ffeda4, type: 2}
+    - target: {fileID: -1084063558550075730, guid: 657c6bc5df231624e8377fe3de5985f4, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: 8d13e0497290a7f448d5bab1e1ffeda4, type: 2}
     - target: {fileID: 2774220344278030320, guid: 657c6bc5df231624e8377fe3de5985f4, type: 3}
@@ -46769,6 +47059,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -6689036041284674117, guid: 657c6bc5df231624e8377fe3de5985f4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2024024304}
+    - targetCorrespondingSourceObject: {fileID: 2603192623656597787, guid: 657c6bc5df231624e8377fe3de5985f4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 770482539}
+    - targetCorrespondingSourceObject: {fileID: 2603192623656597787, guid: 657c6bc5df231624e8377fe3de5985f4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 770482538}
   m_SourcePrefab: {fileID: -5645937942226959685, guid: 657c6bc5df231624e8377fe3de5985f4, type: 3}
 --- !u!4 &1544976388 stripped
 Transform:
@@ -52796,7 +53092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc704ece145aba8499a0603d093a25fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TriviaManager
-  currentCorrectValue: 1
+  currentCorrectValue: 2
   currentNumPiece: 0
   answered: 0
   audioSource: {fileID: 1367349752}
