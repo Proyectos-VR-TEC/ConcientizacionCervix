@@ -21,7 +21,6 @@ public class RandomPitchAudioPlayer : MonoBehaviour
 
     private void Awake()
     {
-        audioSource = GetComponent<AudioSource>();
         audioSource.clip = audioClip;
         
         // Configurar el AudioSource para que no se destruya al cambiar de escena (opcional)

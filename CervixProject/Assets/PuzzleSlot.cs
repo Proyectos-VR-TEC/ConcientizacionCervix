@@ -18,7 +18,7 @@ public class PuzzleSlot : MonoBehaviour
 
     public XRGrabInteractable[] grabInteractables;
 
-    private AudioSource audioSource;
+    public AudioSource audioSource;
     private bool isCompleted = false;
     private Rigidbody pieceRb;
     private XRGrabInteractable pieceGrab;
@@ -48,7 +48,6 @@ public class PuzzleSlot : MonoBehaviour
         if (infoPanel != null)
             infoPanelCanvasGroup = infoPanel.GetComponent<CanvasGroup>();
         
-        audioSource = gameObject.AddComponent<AudioSource>();
         pieceRb = targetPiece.GetComponent<Rigidbody>();
         pieceGrab = targetPiece.GetComponentInChildren<XRGrabInteractable>();
 
@@ -164,10 +163,12 @@ public class PuzzleSlot : MonoBehaviour
             isCompleted = true;
             PuzzleManager.Instance.PiezaColocada();
 
+            audioSource.PlayOneShot(locucionClip);
+
             GetComponentInChildren<MeshRenderer>().enabled = false;
 
             if (infoPanel != null)
-                PuzzleManager.Instance.ShowPanel(infoPanel, infoPanelCanvasGroup, audioSource, locucionClip, locucionDelay, infoPanelDuration, fadeDuration);
+                PuzzleManager.Instance.ShowPanel(infoPanel, infoPanelCanvasGroup, infoPanelDuration, fadeDuration);
 
             Debug.Log("¡Pieza colocada!");
         }

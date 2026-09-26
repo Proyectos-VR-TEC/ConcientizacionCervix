@@ -5775,8 +5775,8 @@ MonoBehaviour:
   - 50%
   - 70%
   - 95%
-  correctClip: {fileID: 0}
-  incorrectClip: {fileID: 0}
+  correctClip: {fileID: 8300000, guid: aff1008d056829c4883725d02e11f3b1, type: 3}
+  incorrectClip: {fileID: 8300000, guid: 49869bca7dec2a844b9fde451139d618, type: 3}
 --- !u!114 &80128649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5811,7 +5811,7 @@ MonoBehaviour:
   targetPiece: {fileID: 1196525142}
   snapDistance: 0.3
   snapSound: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
-  locucionClip: {fileID: 8300000, guid: b7e1284823199ce41aeecc6af4e6549b, type: 3}
+  locucionClip: {fileID: 8300000, guid: 6959e9653bce9a744a7a95492041feae, type: 3}
   closingSound: {fileID: 8300000, guid: 52dae7144646f3348a5ce8a58d08b026, type: 3}
   locucionDelay: 0.5
   slotFantasma: {fileID: 86961378}
@@ -5824,6 +5824,7 @@ MonoBehaviour:
   - {fileID: 1358939575}
   - {fileID: 2065947247}
   - {fileID: 1346983224}
+  audioSource: {fileID: 1367349752}
   infoPanel: {fileID: 3440248930427154593}
   infoPanelDuration: 6.5
   fadeDuration: 1
@@ -5831,7 +5832,7 @@ MonoBehaviour:
   rotationSnapDistance: 0.35
   rotationSpeed: 5
   InfoPanelResponse: {fileID: 1702593057}
-  allPanels: {fileID: 0}
+  allPanels: {fileID: 1957587569}
 --- !u!4 &86961380 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 16880cef7052b5940ae37edbe61a2c5f, type: 3}
@@ -11801,7 +11802,7 @@ MonoBehaviour:
   targetPiece: {fileID: 2065947246}
   snapDistance: 0.3
   snapSound: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
-  locucionClip: {fileID: 8300000, guid: 402bd4ff9a4e8014fb7a56c103ee20a9, type: 3}
+  locucionClip: {fileID: 8300000, guid: 6959e9653bce9a744a7a95492041feae, type: 3}
   closingSound: {fileID: 8300000, guid: 52dae7144646f3348a5ce8a58d08b026, type: 3}
   locucionDelay: 0.5
   slotFantasma: {fileID: 225624365}
@@ -11814,6 +11815,7 @@ MonoBehaviour:
   - {fileID: 1358939575}
   - {fileID: 2065947247}
   - {fileID: 1346983224}
+  audioSource: {fileID: 1367349752}
   infoPanel: {fileID: 1928061151156068976}
   infoPanelDuration: 8.5
   fadeDuration: 1
@@ -11821,7 +11823,7 @@ MonoBehaviour:
   rotationSnapDistance: 0.35
   rotationSpeed: 5
   InfoPanelResponse: {fileID: 1599786624}
-  allPanels: {fileID: 0}
+  allPanels: {fileID: 1957587569}
 --- !u!4 &225624367 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 97cd148bbefb00641bfbba79ea41556a, type: 3}
@@ -14290,7 +14292,7 @@ MonoBehaviour:
   targetPiece: {fileID: 1358939573}
   snapDistance: 0.3
   snapSound: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
-  locucionClip: {fileID: 8300000, guid: bf00caeba20119d438a52edd5936a9d9, type: 3}
+  locucionClip: {fileID: 8300000, guid: 6959e9653bce9a744a7a95492041feae, type: 3}
   closingSound: {fileID: 8300000, guid: 52dae7144646f3348a5ce8a58d08b026, type: 3}
   locucionDelay: 0.5
   slotFantasma: {fileID: 397379488}
@@ -14303,6 +14305,7 @@ MonoBehaviour:
   - {fileID: 1358939575}
   - {fileID: 2065947247}
   - {fileID: 1346983224}
+  audioSource: {fileID: 1367349752}
   infoPanel: {fileID: 3115682787469625752}
   infoPanelDuration: 9.5
   fadeDuration: 1
@@ -14310,7 +14313,7 @@ MonoBehaviour:
   rotationSnapDistance: 0.35
   rotationSpeed: 5
   InfoPanelResponse: {fileID: 811339514}
-  allPanels: {fileID: 0}
+  allPanels: {fileID: 1957587569}
 --- !u!4 &397379490 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b86cb9957dde1a64f9d3fd6fe387a1c8, type: 3}
@@ -20515,6 +20518,18 @@ MonoBehaviour:
           m_StringArgument: button3Correct
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1667290818}
+        m_TargetAssemblyTypeName: TriviaManager, Assembly-CSharp
+        m_MethodName: PlayCorrectAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 2
+          m_StringArgument: button3Correct
+          m_BoolArgument: 0
+        m_CallState: 2
   onIncorrectAnswer:
     m_PersistentCalls:
       m_Calls:
@@ -20558,6 +20573,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: TriviaManager, Assembly-CSharp
         m_MethodName: playBtn
         m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 2
+          m_StringArgument: button3Correct
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1667290818}
+        m_TargetAssemblyTypeName: TriviaManager, Assembly-CSharp
+        m_MethodName: PlayIncorrectAudio
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -20612,7 +20639,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: buttonHover
+          m_StringArgument: hover3
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 166351042}
@@ -20639,7 +20666,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: exithover
+          m_StringArgument: exithover3
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 166351042}
@@ -20663,6 +20690,18 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1367349752}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 561498799}
         m_TargetAssemblyTypeName: TriviaButton, Assembly-CSharp
         m_MethodName: CheckAnswer
@@ -20755,8 +20794,6 @@ GameObject:
   - component: {fileID: 568085442}
   - component: {fileID: 568085446}
   - component: {fileID: 568085447}
-  - component: {fileID: 568085448}
-  - component: {fileID: 568085449}
   m_Layer: 0
   m_Name: OP1
   m_TagString: Untagged
@@ -20816,16 +20853,16 @@ MonoBehaviour:
   m_HoverEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 568085448}
-        m_TargetAssemblyTypeName: ScaleLerpSimple, Assembly-CSharp
-        m_MethodName: IniciarAnimacion
-        m_Mode: 1
+      - m_Target: {fileID: 568085447}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: buttonHover
+          m_StringArgument: hover1
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 837005170}
@@ -20843,16 +20880,16 @@ MonoBehaviour:
   m_HoverExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 568085449}
-        m_TargetAssemblyTypeName: ScaleLerpSimple, Assembly-CSharp
-        m_MethodName: IniciarAnimacion
-        m_Mode: 1
+      - m_Target: {fileID: 568085447}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: exithover
+          m_StringArgument: exithover1
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 837005170}
@@ -20876,6 +20913,18 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1367349752}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1367349752}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: PlayOneShot
@@ -21092,6 +21141,18 @@ MonoBehaviour:
           m_StringArgument: button1Correct
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1667290818}
+        m_TargetAssemblyTypeName: TriviaManager, Assembly-CSharp
+        m_MethodName: PlayCorrectAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 2
+          m_StringArgument: button1Correct
+          m_BoolArgument: 0
+        m_CallState: 2
   onIncorrectAnswer:
     m_PersistentCalls:
       m_Calls:
@@ -21143,6 +21204,18 @@ MonoBehaviour:
           m_StringArgument: button1Correct
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1667290818}
+        m_TargetAssemblyTypeName: TriviaManager, Assembly-CSharp
+        m_MethodName: PlayIncorrectAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 2
+          m_StringArgument: button1Correct
+          m_BoolArgument: 0
+        m_CallState: 2
   triviaManager: {fileID: 1667290818}
 --- !u!95 &568085447
 Animator:
@@ -21166,104 +21239,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &568085448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 568085440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8082450970f0d944691559d95a722316, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ScaleLerpSimple
-  escalaInicial: {x: 0.23102, y: 0.07389637, z: 0.23102003}
-  escalaFinal: {x: 0.2743782, y: 0.08776536, z: 0.27437824}
-  duracion: 1
-  curva:
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - time: 0.43572798
-      value: 0.7025721
-      inSlope: 1.4904506
-      outSlope: 1.4904506
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  autoStart: 0
-  pingPong: 0
-  tiempoActual: 0
-  animando: 0
-  yendoHaciaFinal: 1
---- !u!114 &568085449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 568085440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8082450970f0d944691559d95a722316, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ScaleLerpSimple
-  escalaInicial: {x: 0.2743782, y: 0.08776536, z: 0.27437824}
-  escalaFinal: {x: 0.23102, y: 0.07389637, z: 0.23102003}
-  duracion: 1
-  curva:
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - time: 0.30286455
-      value: 0.5942445
-      inSlope: 1.485771
-      outSlope: 1.485771
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  autoStart: 0
-  pingPong: 0
-  tiempoActual: 0
-  animando: 0
-  yendoHaciaFinal: 1
 --- !u!1 &597563779
 GameObject:
   m_ObjectHideFlags: 0
@@ -22685,7 +22660,7 @@ MonoBehaviour:
   targetPiece: {fileID: 80128641}
   snapDistance: 0.3
   snapSound: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
-  locucionClip: {fileID: 8300000, guid: d507138973194284dbe6afa0cdcc04c5, type: 3}
+  locucionClip: {fileID: 8300000, guid: 6959e9653bce9a744a7a95492041feae, type: 3}
   closingSound: {fileID: 8300000, guid: 52dae7144646f3348a5ce8a58d08b026, type: 3}
   locucionDelay: 0.5
   slotFantasma: {fileID: 668908498}
@@ -22698,6 +22673,7 @@ MonoBehaviour:
   - {fileID: 1358939575}
   - {fileID: 2065947247}
   - {fileID: 1346983224}
+  audioSource: {fileID: 1367349752}
   infoPanel: {fileID: 4714167993255051888}
   infoPanelDuration: 6.5
   fadeDuration: 1
@@ -22705,7 +22681,7 @@ MonoBehaviour:
   rotationSnapDistance: 0.35
   rotationSpeed: 5
   InfoPanelResponse: {fileID: 1539456814}
-  allPanels: {fileID: 0}
+  allPanels: {fileID: 1957587569}
 --- !u!4 &668908501 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b8f2a63e9dc62fc4591190506818681e, type: 3}
@@ -24680,8 +24656,8 @@ MonoBehaviour:
   - 70%
   - 85%
   - 95%
-  correctClip: {fileID: 0}
-  incorrectClip: {fileID: 0}
+  correctClip: {fileID: 8300000, guid: b77380aaee2928248920b08bbf2e07d4, type: 3}
+  incorrectClip: {fileID: 8300000, guid: f85b9f1b83df1154cb9badad7eb9aa83, type: 3}
 --- !u!114 &797614844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36856,6 +36832,7 @@ GameObject:
   - component: {fileID: 1143971194}
   - component: {fileID: 1143971198}
   - component: {fileID: 1143971197}
+  - component: {fileID: 1143971199}
   m_Layer: 0
   m_Name: IntroCanvas
   m_TagString: Untagged
@@ -36978,6 +36955,103 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!82 &1143971199
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143971192}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1147256267
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37059,7 +37133,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1148145646
 Transform:
   m_ObjectHideFlags: 0
@@ -37776,8 +37850,8 @@ MonoBehaviour:
   - 5
   - 8
   - 9
-  correctClip: {fileID: 0}
-  incorrectClip: {fileID: 0}
+  correctClip: {fileID: 8300000, guid: b2ddbdd27ad1de740a4e760409254337, type: 3}
+  incorrectClip: {fileID: 8300000, guid: 20875253c75f8464e9315fefd234fc20, type: 3}
 --- !u!114 &1196525149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44179,8 +44253,8 @@ MonoBehaviour:
   - 140
   - 320
   - 860
-  correctClip: {fileID: 0}
-  incorrectClip: {fileID: 0}
+  correctClip: {fileID: 8300000, guid: 7a7934ed2527ed04585c90e4e478dfdb, type: 3}
+  incorrectClip: {fileID: 8300000, guid: 02dd728b2756918498b2bf8a9b164e97, type: 3}
 --- !u!82 &1346983228
 AudioSource:
   m_ObjectHideFlags: 0
@@ -44686,8 +44760,8 @@ MonoBehaviour:
   - 85%
   - 90%
   - 97%
-  correctClip: {fileID: 0}
-  incorrectClip: {fileID: 0}
+  correctClip: {fileID: 8300000, guid: 67ed3a7acc814374ba4307256815c9bb, type: 3}
+  incorrectClip: {fileID: 8300000, guid: 488aff3850768fc4181fdd921a80d9f7, type: 3}
 --- !u!114 &1358939581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45097,6 +45171,18 @@ MonoBehaviour:
           m_StringArgument: button2Correct
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1667290818}
+        m_TargetAssemblyTypeName: TriviaManager, Assembly-CSharp
+        m_MethodName: PlayCorrectAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 2
+          m_StringArgument: button2Correct
+          m_BoolArgument: 0
+        m_CallState: 2
   onIncorrectAnswer:
     m_PersistentCalls:
       m_Calls:
@@ -45140,6 +45226,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: TriviaManager, Assembly-CSharp
         m_MethodName: playBtn
         m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 2
+          m_StringArgument: button2Correct
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1667290818}
+        m_TargetAssemblyTypeName: TriviaManager, Assembly-CSharp
+        m_MethodName: PlayIncorrectAudio
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -45194,7 +45292,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: buttonHover
+          m_StringArgument: hover2
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 995923173}
@@ -45221,7 +45319,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: exithover
+          m_StringArgument: exithover2
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 995923173}
@@ -45245,6 +45343,18 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1367349752}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1367992023}
         m_TargetAssemblyTypeName: TriviaButton, Assembly-CSharp
         m_MethodName: CheckAnswer
@@ -45363,7 +45473,7 @@ MonoBehaviour:
   targetPiece: {fileID: 797614837}
   snapDistance: 0.3
   snapSound: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
-  locucionClip: {fileID: 8300000, guid: 51321fba56118544ea8e3b6e05c89538, type: 3}
+  locucionClip: {fileID: 8300000, guid: 6959e9653bce9a744a7a95492041feae, type: 3}
   closingSound: {fileID: 8300000, guid: 52dae7144646f3348a5ce8a58d08b026, type: 3}
   locucionDelay: 0.5
   slotFantasma: {fileID: 1375031025}
@@ -45376,6 +45486,7 @@ MonoBehaviour:
   - {fileID: 1358939575}
   - {fileID: 2065947247}
   - {fileID: 1346983224}
+  audioSource: {fileID: 1367349752}
   infoPanel: {fileID: 1067246100561369955}
   infoPanelDuration: 7.5
   fadeDuration: 1
@@ -45383,7 +45494,7 @@ MonoBehaviour:
   rotationSnapDistance: 0.35
   rotationSpeed: 5
   InfoPanelResponse: {fileID: 727909737}
-  allPanels: {fileID: 0}
+  allPanels: {fileID: 1957587569}
 --- !u!4 &1375031027 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2063c7556c062824a8d559f8ae00bc70, type: 3}
@@ -55423,7 +55534,7 @@ MonoBehaviour:
   targetPiece: {fileID: 1346983223}
   snapDistance: 0.3
   snapSound: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
-  locucionClip: {fileID: 8300000, guid: f86a951d758e69940b24481b8084d4fc, type: 3}
+  locucionClip: {fileID: 8300000, guid: 6959e9653bce9a744a7a95492041feae, type: 3}
   closingSound: {fileID: 8300000, guid: 52dae7144646f3348a5ce8a58d08b026, type: 3}
   locucionDelay: 0.5
   slotFantasma: {fileID: 1920437755}
@@ -55436,6 +55547,7 @@ MonoBehaviour:
   - {fileID: 1358939575}
   - {fileID: 2065947247}
   - {fileID: 1346983224}
+  audioSource: {fileID: 1367349752}
   infoPanel: {fileID: 8854755839493459527}
   infoPanelDuration: 7.5
   fadeDuration: 1
@@ -55443,7 +55555,7 @@ MonoBehaviour:
   rotationSnapDistance: 0.35
   rotationSpeed: 5
   InfoPanelResponse: {fileID: 1581315533}
-  allPanels: {fileID: 0}
+  allPanels: {fileID: 1957587569}
 --- !u!4 &1920437757 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7827875154514124567, guid: 4044d2daedded2548a8d6887aafffdac, type: 3}
@@ -55464,6 +55576,14 @@ PrefabInstance:
     - target: {fileID: 1950357561979784443, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1957053503340664469, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
+      propertyPath: m_HoverEnteredData.m_Amplitude
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1957053503340664469, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
+      propertyPath: m_SelectEnteredData.m_Amplitude
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2243020122175513880, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
       propertyPath: m_SizeDelta.x
@@ -55784,6 +55904,14 @@ PrefabInstance:
     - target: {fileID: 8806329115733545878, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8806886322617632778, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
+      propertyPath: m_HoverEnteredData.m_Amplitude
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8806886322617632778, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
+      propertyPath: m_SelectEnteredData.m_Amplitude
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8935853449824297509, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
       propertyPath: m_IsActive
@@ -61891,8 +62019,8 @@ MonoBehaviour:
   - 70%
   - 90%
   - 99%
-  correctClip: {fileID: 0}
-  incorrectClip: {fileID: 0}
+  correctClip: {fileID: 8300000, guid: d97bb7c8e0f64d94cb454f674cbb8eb6, type: 3}
+  incorrectClip: {fileID: 8300000, guid: 3da7a805ec00cef49b95acc8896b85ed, type: 3}
 --- !u!114 &2065947253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62116,6 +62244,7 @@ GameObject:
   - component: {fileID: 2111124194}
   - component: {fileID: 2111124193}
   - component: {fileID: 2111124192}
+  - component: {fileID: 2111124198}
   m_Layer: 0
   m_Name: IntroLobby
   m_TagString: Untagged
@@ -62238,6 +62367,34 @@ RectTransform:
   m_AnchoredPosition: {x: 800, y: 450.00003}
   m_SizeDelta: {x: 1600, y: 900}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2111124198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111124191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0f7fafc6140bdb4a9e8888d25c35a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnActiveStateChanged
+  onBecameActive:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1143971199}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 618ced1d2d130fd43a13b9e865e5918c, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  executeOnlyOnce: 1
 --- !u!1 &2121372969
 GameObject:
   m_ObjectHideFlags: 0

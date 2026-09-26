@@ -11,7 +11,7 @@ public class PuzzleManager : MonoBehaviour
     private CanvasGroup currentCanvasGroup;
     private AudioSource currentAudioSource;
 
-    [Header("Transición")]
+    [Header("Transiciï¿½n")]
     public int totalPiezas = 6;
     public float esperaAntesDeTransicion = 3f;
     public Transform xrOrigin;
@@ -31,7 +31,7 @@ public class PuzzleManager : MonoBehaviour
 
     private bool secuenciaPodiosIniciada = false;
 
-    [Header("Configuración visual del Fade")]
+    [Header("Configuraciï¿½n visual del Fade")]
     public RectTransform fadePanelRect;
     public float fadeDistanceFromCamera = 0.45f;
     public Vector2 fadeCanvasSize = new Vector2(6000f, 3500f);
@@ -75,9 +75,6 @@ public class PuzzleManager : MonoBehaviour
     public void ShowPanel(
         GameObject panel,
         CanvasGroup canvasGroup,
-        AudioSource audioSource,
-        AudioClip locucion,
-        float locucionDelay,
         float duration,
         float fadeDuration
     )
@@ -88,15 +85,11 @@ public class PuzzleManager : MonoBehaviour
         if (currentPanel != null)
             currentPanel.SetActive(false);
 
-        if (currentAudioSource != null)
-            currentAudioSource.Stop();
-
         currentPanel = panel;
         currentCanvasGroup = canvasGroup;
-        currentAudioSource = audioSource;
 
         currentPanelCoroutine = StartCoroutine(
-            RunPanel(panel, canvasGroup, audioSource, locucion, locucionDelay, duration, fadeDuration)
+            RunPanel(panel, canvasGroup, duration, fadeDuration)
         );
     }
 
@@ -198,9 +191,6 @@ public class PuzzleManager : MonoBehaviour
     IEnumerator RunPanel(
         GameObject panel,
         CanvasGroup canvasGroup,
-        AudioSource audioSource,
-        AudioClip locucion,
-        float locucionDelay,
         float duration,
         float fadeDuration
     )
@@ -212,12 +202,6 @@ public class PuzzleManager : MonoBehaviour
         canvasGroup.alpha = 1f;
         canvasGroup.interactable = true;
         canvasGroup.blocksRaycasts = true;
-
-        if (locucion != null && audioSource != null)
-        {
-            yield return new WaitForSeconds(locucionDelay);
-            audioSource.PlayOneShot(locucion);
-        }
 
         yield return new WaitForSeconds(duration);
 
@@ -287,7 +271,7 @@ public class PuzzleManager : MonoBehaviour
         // Volver a mostrar mandos, manos y rayos.
         RestaurarObjetosDuranteFade();
 
-        // Iniciar paneles y locución de la Sala 2 después de que todo ya aclaró
+        // Iniciar paneles y locuciï¿½n de la Sala 2 despuï¿½s de que todo ya aclarï¿½
         StartCoroutine(IniciarSecuenciaPodiosDespuesDelFade());
     }
 
@@ -327,7 +311,7 @@ public class PuzzleManager : MonoBehaviour
     {
         if (fadeCanvasObject == null || fadeCanvasGroup == null)
         {
-            Debug.LogWarning("No está asignado FadeCanvasObject o FadeCanvasGroup.");
+            Debug.LogWarning("No estï¿½ asignado FadeCanvasObject o FadeCanvasGroup.");
             return;
         }
 
