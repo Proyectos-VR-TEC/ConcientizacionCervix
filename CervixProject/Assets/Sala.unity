@@ -44248,11 +44248,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzlePiece
   numPiece: 6
-  correctAnswerValue: 1
+  correctAnswerValue: 3
   answerOptions:
+  - 30
+  - 85
   - 140
-  - 320
-  - 860
   correctClip: {fileID: 8300000, guid: 7a7934ed2527ed04585c90e4e478dfdb, type: 3}
   incorrectClip: {fileID: 8300000, guid: 02dd728b2756918498b2bf8a9b164e97, type: 3}
 --- !u!82 &1346983228
@@ -44823,7 +44823,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleManager
   totalPiezas: 6
-  esperaAntesDeTransicion: 1
+  esperaAntesDeTransicion: 11
   xrOrigin: {fileID: 1583534469}
   xrCamera: {fileID: 677102042}
   spawnSala2: {fileID: 15122885}

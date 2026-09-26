@@ -13,7 +13,7 @@ public class PuzzleManager : MonoBehaviour
 
     [Header("Transici�n")]
     public int totalPiezas = 6;
-    public float esperaAntesDeTransicion = 3f;
+    public float esperaAntesDeTransicion;
     public Transform xrOrigin;
     public Transform xrCamera;
     public Transform spawnSala2;

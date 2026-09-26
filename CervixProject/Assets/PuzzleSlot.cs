@@ -163,6 +163,7 @@ public class PuzzleSlot : MonoBehaviour
             isCompleted = true;
             PuzzleManager.Instance.PiezaColocada();
 
+            audioSource.Stop(); // Detener cualquier audio que se esté reproduciendo
             audioSource.PlayOneShot(locucionClip);
 
             GetComponentInChildren<MeshRenderer>().enabled = false;
