@@ -11684,6 +11684,135 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!1 &210598701
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 210598703}
+  - component: {fileID: 210598702}
+  m_Layer: 0
+  m_Name: GameState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &210598702
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210598701}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &210598703
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210598701}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -12.953, y: 1.222, z: 6.353}
+  m_LocalScale: {x: 0.00050000014, y: 0.0005, z: 0.00050000014}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &225624365 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 97cd148bbefb00641bfbba79ea41556a, type: 3}
@@ -38059,19 +38188,19 @@ MonoBehaviour:
   imagenObj: {fileID: 358399645}
   pantallaVideo: {fileID: 1732321345}
   videoPlayer: {fileID: 1732321346}
-  spriteInicial: {fileID: 0}
-  spritePregunta: {fileID: 0}
-  spritePositivo: {fileID: 0}
-  spriteNegativo: {fileID: 0}
-  audioSource: {fileID: 0}
-  audioInicial: {fileID: 0}
-  audioPositivo: {fileID: 0}
-  audioNegativo: {fileID: 0}
+  spriteInicial: {fileID: 21300000, guid: 197f93751c51589458716551aa1f8007, type: 3}
+  spritePregunta: {fileID: 21300000, guid: 4e63d72ed4a98904184ca7a4b36bb4da, type: 3}
+  spritePositivo: {fileID: 21300000, guid: c1eb75888f18b694f850cc41c5b84e66, type: 3}
+  spriteNegativo: {fileID: 21300000, guid: 581bf8fe69d0d174ab0c8a7b725d188b, type: 3}
+  audioSource: {fileID: 210598702}
+  audioInicial: {fileID: 8300000, guid: ddd74abc3b9e16a46a0d4fe9d5315903, type: 3}
+  audioPositivo: {fileID: 8300000, guid: bce32b8549b95dc40987cd58c71e12ce, type: 3}
+  audioNegativo: {fileID: 8300000, guid: 43595c5a864b2974ca393e6aa4518803, type: 3}
   videoInicial: {fileID: 32900000, guid: 141603b5cdff7da49ac2834f656f0fd1, type: 3}
   videoConsecuenciaSi: {fileID: 32900000, guid: 59d552cd9f174524bada2a73b4d44ecb, type: 3}
   videoConsecuenciaNo: {fileID: 32900000, guid: 8e233e91ca647d741a2a71d3314cab4d, type: 3}
   tiempoParaPregunta: 5
-  state: {fileID: 0}
+  state: {fileID: 11400000, guid: 9f137f1f6dd3ec147b6aabd66bce7124, type: 2}
 --- !u!224 &1270687271
 RectTransform:
   m_ObjectHideFlags: 0
@@ -52922,10 +53051,10 @@ MonoBehaviour:
   pantallaVideo: {fileID: 1201535507}
   videoPlayer: {fileID: 1201535511}
   spriteInicial: {fileID: 0}
-  spritePregunta: {fileID: 0}
+  spritePregunta: {fileID: 21300000, guid: e578130ff59b7044092f45eb0d9833b2, type: 3}
   spritePositivo: {fileID: 0}
   spriteNegativo: {fileID: 0}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 210598702}
   audioInicial: {fileID: 0}
   audioPositivo: {fileID: 0}
   audioNegativo: {fileID: 0}
@@ -52933,7 +53062,7 @@ MonoBehaviour:
   videoConsecuenciaSi: {fileID: 32900000, guid: 6bd40f3679a84ef45932c2ca903d53bf, type: 3}
   videoConsecuenciaNo: {fileID: 32900000, guid: 6bd40f3679a84ef45932c2ca903d53bf, type: 3}
   tiempoParaPregunta: 5
-  state: {fileID: 0}
+  state: {fileID: 11400000, guid: 9f137f1f6dd3ec147b6aabd66bce7124, type: 2}
 --- !u!114 &1727380355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60942,19 +61071,19 @@ MonoBehaviour:
   imagenObj: {fileID: 877050532}
   pantallaVideo: {fileID: 1847998073}
   videoPlayer: {fileID: 1847998075}
-  spriteInicial: {fileID: 0}
-  spritePregunta: {fileID: 0}
-  spritePositivo: {fileID: 0}
-  spriteNegativo: {fileID: 0}
-  audioSource: {fileID: 0}
-  audioInicial: {fileID: 0}
-  audioPositivo: {fileID: 0}
-  audioNegativo: {fileID: 0}
+  spriteInicial: {fileID: 21300000, guid: d1cf436d45ffa6c4a9f926cd366ef557, type: 3}
+  spritePregunta: {fileID: 21300000, guid: 65ceb16b4251028448479901134e45fe, type: 3}
+  spritePositivo: {fileID: 21300000, guid: 2d2e0e03254c32043ada183eeaf34b4f, type: 3}
+  spriteNegativo: {fileID: 21300000, guid: afe2c486099547a47b40b77c7c52a95c, type: 3}
+  audioSource: {fileID: 210598702}
+  audioInicial: {fileID: 8300000, guid: 14bd4bc45e21dc14a89bea1587053000, type: 3}
+  audioPositivo: {fileID: 8300000, guid: 8e6aa8a94c352af43b181a96b45dd347, type: 3}
+  audioNegativo: {fileID: 8300000, guid: 06641c30a147be9409f62272482e0679, type: 3}
   videoInicial: {fileID: 32900000, guid: 68a8e4a49a1b1b841af8631255d561a5, type: 3}
   videoConsecuenciaSi: {fileID: 32900000, guid: 298e3caec98e0a743b26228bd5d0ed0b, type: 3}
   videoConsecuenciaNo: {fileID: 32900000, guid: 9b97cb799828eae49912c7567d6b2e50, type: 3}
   tiempoParaPregunta: 5
-  state: {fileID: 0}
+  state: {fileID: 11400000, guid: 9f137f1f6dd3ec147b6aabd66bce7124, type: 2}
 --- !u!1 &2024024303 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6689036041284674117, guid: 657c6bc5df231624e8377fe3de5985f4, type: 3}
@@ -64215,6 +64344,7 @@ SceneRoots:
   - {fileID: 2002320330}
   - {fileID: 674367558}
   - {fileID: 15122885}
+  - {fileID: 210598703}
   - {fileID: 677699226}
   - {fileID: 1219953511}
   - {fileID: 621827132}

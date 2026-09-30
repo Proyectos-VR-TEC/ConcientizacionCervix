@@ -37,12 +37,6 @@ public abstract class PanelDecisionBase : MonoBehaviour
         if (imagenObj != null)
             imagen = imagenObj.GetComponent<Image>();
 
-        if (audioSource == null)
-            audioSource = GetComponent<AudioSource>();
-
-        if (audioSource == null)
-            audioSource = gameObject.AddComponent<AudioSource>();
-
         audioSource.playOnAwake = false;
     }
 
