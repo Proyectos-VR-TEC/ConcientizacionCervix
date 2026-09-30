@@ -2,13 +2,17 @@ using UnityEngine;
 
 public class Bala : MonoBehaviour
 {
-    public float velocidad = 20f;
-    public float vidaUtil = 50f;
+    public float flotabilidad = 3f;
+    public float vidaUtil = 4f;
+
+    void FixedUpdate()
+    {
+        // Empuje hacia arriba constante
+        GetComponent<Rigidbody>().AddForce(Vector3.up * flotabilidad, ForceMode.Force);
+    }
 
     void Start()
     {
-        Rigidbody rb = GetComponent<Rigidbody>();
-        if (rb != null) rb.linearVelocity = transform.forward * velocidad;
         Destroy(gameObject, vidaUtil);
     }
 }
