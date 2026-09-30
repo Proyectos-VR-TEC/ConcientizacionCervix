@@ -51,8 +51,8 @@ public abstract class PanelDecisionBase : MonoBehaviour
 
     protected virtual void Start()
     {
-        if (pantallaVideo != null)
-            pantallaVideo.SetActive(false);
+        /*if (pantallaVideo != null)
+            pantallaVideo.SetActive(false);*/
     }
 
     public virtual void AlAgarrar()
