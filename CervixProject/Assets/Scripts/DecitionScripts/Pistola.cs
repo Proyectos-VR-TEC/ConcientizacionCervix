@@ -8,6 +8,8 @@ public class Pistola : MonoBehaviour
     public GameObject balaPrefab;
     public Transform spawnPoint;
     public float velocidadDisparo = 30f;
+    public RandomPitchShoot shootData;
+    public AudioSource audioSource;
 
     [Header("Cadencia")]
     public float cadenciaDisparos = 0.08f; // segundos entre balas (0.08 ≈ 12 balas/seg)
@@ -68,6 +70,11 @@ public class Pistola : MonoBehaviour
         if (rb != null)
         {
             rb.linearVelocity = spawnPoint.forward * velocidadDisparo;
+        }
+
+        if (shootData != null)
+        {
+            shootData.Play(audioSource);
         }
 
         Destroy(nuevaBala, vidaBala);
