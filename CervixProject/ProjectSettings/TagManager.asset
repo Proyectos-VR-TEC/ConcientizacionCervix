@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 3
   tags:
   - Anchor
+  - PuzzlePiece
+  - Condon
+  - Folder
+  - Calendario
+  - Bala
   layers:
   - Default
   - TransparentFX

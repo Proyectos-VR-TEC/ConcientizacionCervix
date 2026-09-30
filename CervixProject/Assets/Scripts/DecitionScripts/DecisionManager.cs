@@ -39,7 +39,6 @@ public class DecisionManager : MonoBehaviour
     {
         if (index >= paneles.Length)
         {
-            // Ya no hay más → disparar evento final
             alCompletarTodo?.Invoke();
             return;
         }
@@ -47,9 +46,16 @@ public class DecisionManager : MonoBehaviour
         indiceActual = index;
         esperandoDecision = true;
 
-        paneles[index].gameObject.SetActive(true);
-        paneles[index].AlAgarrar();   // dispara video/audio inicial del panel
+        var panel = paneles[index];
+        panel.gameObject.SetActive(true);
 
+        // 🆕 Asignar el callback ANTES de arrancar
+        panel.AlTerminarConsecuencia = () => NotificarDecisionCompletada();
+
+        // 🆕 Reset por si se reutiliza
+        panel.ResetPanel();
+
+        panel.AlAgarrar();
         ActivarDianas(index);
     }
 
@@ -58,11 +64,9 @@ public class DecisionManager : MonoBehaviour
         if (!esperandoDecision) return;
         esperandoDecision = false;
 
-        // Desactivar panel y dianas actuales
         paneles[indiceActual].gameObject.SetActive(false);
         DesactivarDianas(indiceActual);
 
-        // Pasar a la siguiente
         ActivarDecision(indiceActual + 1);
     }
 

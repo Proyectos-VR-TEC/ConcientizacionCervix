@@ -44,9 +44,6 @@ public class Diana : MonoBehaviour
         {
             Debug.LogWarning($"Diana {name} no tiene panel asignado");
         }
-
-        // Notificar al manager que esta decisión terminó
-        DecisionManager.Instance?.NotificarDecisionCompletada();
     }
 
     public void ResetDiana()

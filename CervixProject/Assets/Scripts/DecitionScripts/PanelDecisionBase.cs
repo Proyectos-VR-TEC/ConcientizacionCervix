@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.UI;
+using System;
 
 public abstract class PanelDecisionBase : MonoBehaviour
 {
@@ -31,6 +32,14 @@ public abstract class PanelDecisionBase : MonoBehaviour
 
     protected Image imagen;
     private bool preguntaMostrada = false;
+
+    // Callback que el DecisionManager asigna al activar el panel
+    public Action AlTerminarConsecuencia;
+
+    // Para saber si estamos esperando a que termine la consecuencia
+    private bool esperandoFinConsecuencia = false;
+    private float timerConsecuencia = 0f;
+    private float duracionConsecuencia = 0f;
 
     protected virtual void Awake()
     {
@@ -64,6 +73,7 @@ public abstract class PanelDecisionBase : MonoBehaviour
         SetSprite(spritePositivo);
         PlayVideo(videoConsecuenciaSi);
         PlayAudio(audioPositivo);
+        IniciarEsperaConsecuencia(videoConsecuenciaSi, audioPositivo);
     }
 
     public virtual void MostrarConsecuenciaNo()
@@ -72,6 +82,21 @@ public abstract class PanelDecisionBase : MonoBehaviour
         SetSprite(spriteNegativo);
         PlayVideo(videoConsecuenciaNo);
         PlayAudio(audioNegativo);
+        IniciarEsperaConsecuencia(videoConsecuenciaNo, audioNegativo);
+    }
+
+    // Calcula cuánto dura la consecuencia más larga (video o audio)
+    private void IniciarEsperaConsecuencia(VideoClip video, AudioClip audio)
+    {
+        float durVideo = (video != null) ? (float)video.length : 0f;
+        float durAudio = (audio != null) ? audio.length : 0f;
+        duracionConsecuencia = Mathf.Max(durVideo, durAudio);
+
+        // Fallback: si no hay ni video ni audio, esperamos 2s
+        if (duracionConsecuencia <= 0f) duracionConsecuencia = 2f;
+
+        timerConsecuencia = 0f;
+        esperandoFinConsecuencia = true;
     }
 
     protected void SetSprite(Sprite s)
@@ -101,20 +126,34 @@ public abstract class PanelDecisionBase : MonoBehaviour
 
     protected virtual void Update()
     {
-        if (preguntaMostrada) return;
-        if (audioSource == null || !audioSource.isPlaying) return;
-        if (audioSource.clip != audioInicial) return;
-
-        if (audioSource.time >= tiempoParaPregunta)
+        // Cambio automático a la imagen de pregunta
+        if (!preguntaMostrada &&
+            audioSource != null &&
+            audioSource.isPlaying &&
+            audioSource.clip == audioInicial &&
+            audioSource.time >= tiempoParaPregunta)
         {
             SetSprite(spritePregunta);
             preguntaMostrada = true;
+        }
+
+        // Fin de la consecuencia
+        if (esperandoFinConsecuencia)
+        {
+            timerConsecuencia += Time.deltaTime;
+            if (timerConsecuencia >= duracionConsecuencia)
+            {
+                esperandoFinConsecuencia = false;
+                AlTerminarConsecuencia?.Invoke();
+            }
         }
     }
 
     public void ResetPanel()
     {
         preguntaMostrada = false;
+        esperandoFinConsecuencia = false;
+        timerConsecuencia = 0f;
         if (audioSource != null) audioSource.Stop();
         if (videoPlayer != null) videoPlayer.Stop();
     }

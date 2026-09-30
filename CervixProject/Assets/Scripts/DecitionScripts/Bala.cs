@@ -3,7 +3,7 @@ using UnityEngine;
 public class Bala : MonoBehaviour
 {
     public float velocidad = 20f;
-    public float vidaUtil = 5f;
+    public float vidaUtil = 50f;
 
     void Start()
     {
