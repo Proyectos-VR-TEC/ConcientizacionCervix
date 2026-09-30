@@ -90,7 +90,7 @@ public abstract class PanelDecisionBase : MonoBehaviour
     {
         float durVideo = (video != null) ? (float)video.length : 0f;
         float durAudio = (audio != null) ? audio.length : 0f;
-        duracionConsecuencia = Mathf.Max(durVideo, durAudio);
+        duracionConsecuencia = Mathf.Max(durVideo, durAudio) + 2f;
 
         // Fallback: si no hay ni video ni audio, esperamos 2s
         if (duracionConsecuencia <= 0f) duracionConsecuencia = 2f;
