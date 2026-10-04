@@ -20,6 +20,7 @@ public class TriviaManager : MonoBehaviour
     public bool answered;
 
     public AudioSource audioSource;
+    public int contadorRespuestas = 0;
 
     [SerializeField] private AudioClip currentCorrectAudioClip;
     [SerializeField] private AudioClip currentIncorrectAudioClip;
@@ -40,6 +41,7 @@ public class TriviaManager : MonoBehaviour
     public Animator[] buttonAnimators;
     [Header("Panel respuestas")]
     public GameObject[] paneles;
+    public PuzzleManager puzzleManager;
 
     /// <summary>
     /// Llamar esto desde la pieza cuando se coloca en su lugar correcto.
@@ -49,6 +51,14 @@ public class TriviaManager : MonoBehaviour
     /// <param name="incorrectClip">El AudioClip que se reproduce cuando la respuesta es incorrecta.</param>
     /// <param name="answerOptions">Los TextMesh que muestran las opciones de respuesta.</param>
     /// <param name="numPiece">El número de la pieza actual.</param>
+    public void Update()
+    {
+        if (contadorRespuestas >= 6)
+        {
+            puzzleManager.todasRespondidas = true;
+        }
+    }
+    
     public void StartTrivia(int correctValue, AudioClip correctClip, AudioClip incorrectClip, string[] answerOptions, int numPiece)
     {
         currentCorrectValue = correctValue;

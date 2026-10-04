@@ -30,6 +30,7 @@ public class PuzzleManager : MonoBehaviour
     public float delayAudioDespuesFade = 0.7f;
 
     private bool secuenciaPodiosIniciada = false;
+    public bool todasRespondidas = false;
 
     [Header("Configuraci�n visual del Fade")]
     public RectTransform fadePanelRect;
@@ -102,8 +103,11 @@ public class PuzzleManager : MonoBehaviour
 
         if (piezasColocadas >= totalPiezas)
         {
-            finalActivado = true;
-            StartCoroutine(MostrarPanelFinal());
+            if (todasRespondidas)
+            {
+                finalActivado = true;
+                StartCoroutine(MostrarPanelFinal());
+            }
         }
     }
 
