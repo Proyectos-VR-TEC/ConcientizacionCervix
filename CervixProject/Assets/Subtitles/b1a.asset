@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: b1a
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
   subtitle:
-    speaker: Tami
+    speaker: ' '
     message: "Est\xE1s aqu\xED para aprender sobre el c\xE1ncer de c\xE9rvix, una
       enfermedad com\xFAn, prevenible, y de la que casi no se habla."
     duration: 6

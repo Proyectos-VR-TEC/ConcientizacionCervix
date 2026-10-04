@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: b3a
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
   subtitle:
-    speaker: Tami
+    speaker: ' '
     message: "Te estar\xE1s preguntando qu\xE9 es el cancer de c\xE9rvix, \xE9ste
       se desarrolla en el cuello uterino. Tarda a\xF1os en formarse, pasa por etapas."
     duration: 9

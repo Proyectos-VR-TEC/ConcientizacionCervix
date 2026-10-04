@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: b5a
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
   subtitle:
-    speaker: Tami
+    speaker: ' '
     message: "Primero, veamos c\xF3mo est\xE1 la situaci\xF3n hoy en Costa Rica."
     duration: 4
