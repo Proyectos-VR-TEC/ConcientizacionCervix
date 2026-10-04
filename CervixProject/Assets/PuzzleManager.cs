@@ -73,6 +73,21 @@ public class PuzzleManager : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        if (finalActivado)
+            return; 
+            
+        if (piezasColocadas >= totalPiezas)
+        {
+            if (todasRespondidas)
+            {
+                finalActivado = true;
+                StartCoroutine(MostrarPanelFinal());
+            }
+        }
+    }
+
     public void ShowPanel(
         GameObject panel,
         CanvasGroup canvasGroup,
@@ -100,15 +115,6 @@ public class PuzzleManager : MonoBehaviour
             return;
 
         piezasColocadas++;
-
-        if (piezasColocadas >= totalPiezas)
-        {
-            if (todasRespondidas)
-            {
-                finalActivado = true;
-                StartCoroutine(MostrarPanelFinal());
-            }
-        }
     }
 
     IEnumerator MostrarPanelFinal()
