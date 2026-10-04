@@ -5811,7 +5811,7 @@ MonoBehaviour:
   targetPiece: {fileID: 1196525142}
   snapDistance: 0.3
   snapSound: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
-  locucionClip: {fileID: 8300000, guid: 6959e9653bce9a744a7a95492041feae, type: 3}
+  locucionClip: {fileID: 8300000, guid: d17072c268a7eb2498dba401f2c02b2e, type: 3}
   closingSound: {fileID: 8300000, guid: 52dae7144646f3348a5ce8a58d08b026, type: 3}
   locucionDelay: 0.5
   slotFantasma: {fileID: 86961378}
@@ -11865,7 +11865,7 @@ MonoBehaviour:
   targetPiece: {fileID: 2065947246}
   snapDistance: 0.3
   snapSound: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
-  locucionClip: {fileID: 8300000, guid: 6959e9653bce9a744a7a95492041feae, type: 3}
+  locucionClip: {fileID: 8300000, guid: be070733994174a408960936b55dabd4, type: 3}
   closingSound: {fileID: 8300000, guid: 52dae7144646f3348a5ce8a58d08b026, type: 3}
   locucionDelay: 0.5
   slotFantasma: {fileID: 225624365}
@@ -14264,7 +14264,7 @@ MonoBehaviour:
   targetPiece: {fileID: 1358939573}
   snapDistance: 0.3
   snapSound: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
-  locucionClip: {fileID: 8300000, guid: 6959e9653bce9a744a7a95492041feae, type: 3}
+  locucionClip: {fileID: 8300000, guid: 0cb8ced7924ea9c48978a6ce4c87234f, type: 3}
   closingSound: {fileID: 8300000, guid: 52dae7144646f3348a5ce8a58d08b026, type: 3}
   locucionDelay: 0.5
   slotFantasma: {fileID: 397379488}
@@ -22522,7 +22522,7 @@ MonoBehaviour:
   targetPiece: {fileID: 80128641}
   snapDistance: 0.3
   snapSound: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
-  locucionClip: {fileID: 8300000, guid: 6959e9653bce9a744a7a95492041feae, type: 3}
+  locucionClip: {fileID: 8300000, guid: adbe7927728c70549831981e65a7e6f3, type: 3}
   closingSound: {fileID: 8300000, guid: 52dae7144646f3348a5ce8a58d08b026, type: 3}
   locucionDelay: 0.5
   slotFantasma: {fileID: 668908498}
@@ -23132,7 +23132,7 @@ PrefabInstance:
     - target: {fileID: 658837768752739287, guid: 97f2a111c43eee24c90c5f8c81e706cd, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 95fa8d2582fbe5e4894a0dd301f4a6a3, type: 3}
+      objectReference: {fileID: 21300000, guid: be1a3e27f01bf894ead63c3faf6464d9, type: 3}
     - target: {fileID: 6388532357604383400, guid: 97f2a111c43eee24c90c5f8c81e706cd, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -38614,7 +38614,7 @@ MonoBehaviour:
   m_Activated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1230796439}
+      - m_Target: {fileID: 1667290820}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: PlayOneShot
         m_Mode: 2
@@ -38736,8 +38736,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1230796433}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.99995506, z: -0, w: 0.009484413}
-  m_LocalPosition: {x: 2.078, y: -0.055, z: 1.951}
+  m_LocalRotation: {x: 0, y: 0.99995506, z: 0, w: 0.009484413}
+  m_LocalPosition: {x: -8.004, y: -0.372, z: 7.939}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -46041,7 +46041,7 @@ MonoBehaviour:
   targetPiece: {fileID: 797614837}
   snapDistance: 0.3
   snapSound: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
-  locucionClip: {fileID: 8300000, guid: 6959e9653bce9a744a7a95492041feae, type: 3}
+  locucionClip: {fileID: 8300000, guid: 4b6918d3fe3e46744bf8badcd7e23704, type: 3}
   closingSound: {fileID: 8300000, guid: 52dae7144646f3348a5ce8a58d08b026, type: 3}
   locucionDelay: 0.5
   slotFantasma: {fileID: 1375031025}
@@ -46666,7 +46666,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1423584292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57083,7 +57083,7 @@ MonoBehaviour:
   targetPiece: {fileID: 1346983223}
   snapDistance: 0.3
   snapSound: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
-  locucionClip: {fileID: 8300000, guid: 6959e9653bce9a744a7a95492041feae, type: 3}
+  locucionClip: {fileID: 8300000, guid: 809326d52425d9746818de53632a9157, type: 3}
   closingSound: {fileID: 8300000, guid: 52dae7144646f3348a5ce8a58d08b026, type: 3}
   locucionDelay: 0.5
   slotFantasma: {fileID: 1920437755}
@@ -64564,7 +64564,7 @@ PrefabInstance:
     - target: {fileID: 658837768752739287, guid: 97f2a111c43eee24c90c5f8c81e706cd, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 7417c2e2eba34a2468ddda6475a00b89, type: 3}
+      objectReference: {fileID: 21300000, guid: 21e4eb2aadf987447aab6e9bdd90b71c, type: 3}
     - target: {fileID: 6388532357604383400, guid: 97f2a111c43eee24c90c5f8c81e706cd, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -65816,9 +65816,9 @@ SceneRoots:
   - {fileID: 1919667233}
   - {fileID: 513550832}
   - {fileID: 1413681600}
+  - {fileID: 1569706042}
   - {fileID: 1367349749}
   - {fileID: 1667290817}
-  - {fileID: 1569706042}
   - {fileID: 1023254390}
   - {fileID: 1970496086}
   - {fileID: 829738350}
