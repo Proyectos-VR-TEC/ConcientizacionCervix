@@ -15,6 +15,7 @@ public abstract class PanelDecisionBase : MonoBehaviour
     public Sprite spritePregunta;
     public Sprite spritePositivo;
     public Sprite spriteNegativo;
+    public GameObject tamiImage;
 
     [Header("Audios")]
     public AudioSource audioSource;
@@ -135,6 +136,7 @@ public abstract class PanelDecisionBase : MonoBehaviour
         {
             SetSprite(spritePregunta);
             preguntaMostrada = true;
+            tamiImage.SetActive(false);
         }
 
         // Fin de la consecuencia

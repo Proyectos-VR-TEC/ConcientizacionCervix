@@ -12269,6 +12269,81 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1083309362}
   m_SourcePrefab: {fileID: 100100000, guid: 16880cef7052b5940ae37edbe61a2c5f, type: 3}
+--- !u!1 &255148525
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 255148526}
+  - component: {fileID: 255148528}
+  - component: {fileID: 255148527}
+  m_Layer: 5
+  m_Name: TamiBallImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &255148526
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255148525}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -3.5107484}
+  m_LocalScale: {x: 0.37080738, y: 0.37080762, z: 0.37080738}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1727380353}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -593.1429, y: -337.74002}
+  m_SizeDelta: {x: 1101, y: 881}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &255148527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255148525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 989f88c0bcb2e9c4d928652c0ae54a5b, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &255148528
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255148525}
+  m_CullTransparentMesh: 1
 --- !u!1 &259761719
 GameObject:
   m_ObjectHideFlags: 0
@@ -22537,7 +22612,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &621827132
 Transform:
   m_ObjectHideFlags: 0
@@ -37674,8 +37749,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1124991904}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -25.20438}
-  m_LocalScale: {x: 0.37080738, y: 0.37080762, z: 0.37080738}
+  m_LocalPosition: {x: 0, y: 0, z: -25.203634}
+  m_LocalScale: {x: 0.37080732, y: 0.37080762, z: 0.37080732}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2014097295}
@@ -39653,7 +39728,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1219953511
 Transform:
   m_ObjectHideFlags: 0
@@ -40322,6 +40397,7 @@ MonoBehaviour:
   spritePregunta: {fileID: 21300000, guid: 4e63d72ed4a98904184ca7a4b36bb4da, type: 3}
   spritePositivo: {fileID: 21300000, guid: c1eb75888f18b694f850cc41c5b84e66, type: 3}
   spriteNegativo: {fileID: 21300000, guid: 581bf8fe69d0d174ab0c8a7b725d188b, type: 3}
+  tamiImage: {fileID: 667021573}
   audioSource: {fileID: 210598702}
   audioInicial: {fileID: 8300000, guid: ddd74abc3b9e16a46a0d4fe9d5315903, type: 3}
   audioPositivo: {fileID: 8300000, guid: bce32b8549b95dc40987cd58c71e12ce, type: 3}
@@ -56570,6 +56646,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 255148526}
   - {fileID: 2125369997}
   - {fileID: 1201535508}
   m_Father: {fileID: 371795980}
@@ -56598,6 +56675,7 @@ MonoBehaviour:
   spritePregunta: {fileID: 21300000, guid: e578130ff59b7044092f45eb0d9833b2, type: 3}
   spritePositivo: {fileID: 0}
   spriteNegativo: {fileID: 0}
+  tamiImage: {fileID: 1727380352}
   audioSource: {fileID: 210598702}
   audioInicial: {fileID: 0}
   audioPositivo: {fileID: 0}
@@ -64895,6 +64973,7 @@ MonoBehaviour:
   spritePregunta: {fileID: 21300000, guid: 65ceb16b4251028448479901134e45fe, type: 3}
   spritePositivo: {fileID: 21300000, guid: 2d2e0e03254c32043ada183eeaf34b4f, type: 3}
   spriteNegativo: {fileID: 21300000, guid: afe2c486099547a47b40b77c7c52a95c, type: 3}
+  tamiImage: {fileID: 1124991904}
   audioSource: {fileID: 210598702}
   audioInicial: {fileID: 8300000, guid: 14bd4bc45e21dc14a89bea1587053000, type: 3}
   audioPositivo: {fileID: 8300000, guid: 8e6aa8a94c352af43b181a96b45dd347, type: 3}
