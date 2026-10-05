@@ -1,13 +1,13 @@
 using UnityEngine;
-using UnityEngine.UI;
+
 public class Diana : MonoBehaviour
 {
     [Header("Configuración")]
-    public bool esDianaSi = true;          // true = SÍ, false = NO
+    public bool esDianaSi = true;
     public string tagBala = "Bala";
 
     [Header("Referencias")]
-    public PanelDecisionBase panel;        // el panel que esta diana controla
+    public PanelDecisionBase panel;
 
     [Header("Feedback (opcional)")]
     public Renderer rend;
@@ -15,6 +15,7 @@ public class Diana : MonoBehaviour
     private Color colorOriginal;
 
     private bool yaDisparada = false;
+    private bool bloqueada = false;   // 🆕
 
     void Awake()
     {
@@ -24,17 +25,18 @@ public class Diana : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if (yaDisparada) return;
+        if (bloqueada) return;                       // 🆕
         if (!other.CompareTag(tagBala)) return;
 
         yaDisparada = true;
 
-        // Feedback visual
         if (rend != null) rend.material.color = colorImpacto;
 
-        // Destruir la bala
         Destroy(other.gameObject);
 
-        // Delegar la decisión al panel
+        // 🆕 Avisar al manager para que bloquee las otras dianas del grupo
+        DecisionManager.Instance?.BloquearOtrasDianas(this);
+
         if (panel != null)
         {
             if (esDianaSi) panel.MostrarConsecuenciaSi();
@@ -46,9 +48,16 @@ public class Diana : MonoBehaviour
         }
     }
 
+    // 🆕 Método para bloquear sin desactivar el GameObject
+    public void Bloquear()
+    {
+        bloqueada = true;
+    }
+
     public void ResetDiana()
     {
         yaDisparada = false;
+        bloqueada = false;                            // 🆕
         if (rend != null) rend.material.color = colorOriginal;
     }
 }

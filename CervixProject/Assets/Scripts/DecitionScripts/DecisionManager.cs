@@ -40,10 +40,12 @@ public class DecisionManager : MonoBehaviour
         if (index >= paneles.Length)
         {
             alCompletarTodo?.Invoke();
+            Debug.Log("DecisionManager: Todas las decisiones completadas.");
             return;
         }
 
         indiceActual = index;
+        Debug.Log($"DecisionManager: Activando decisión {index}.");
         esperandoDecision = true;
 
         var panel = paneles[index];
@@ -96,4 +98,21 @@ public class DecisionManager : MonoBehaviour
             _ => new Diana[0]
         };
     }
+
+    public void BloquearOtrasDianas(Diana origen)
+{
+    for (int i = 0; i < paneles.Length; i++)
+    {
+        Diana[] grupo = GetDianasDePanel(i);
+        if (System.Array.IndexOf(grupo, origen) < 0) continue;
+
+        foreach (var d in grupo)
+        {
+            if (d == null || d == origen) continue;
+            d.Bloquear();
+        }
+        return; // ya encontramos su grupo
+    }
 }
+}
+
