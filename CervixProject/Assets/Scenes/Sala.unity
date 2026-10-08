@@ -5761,6 +5761,80 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 362d6ef39c853974996fa20d7d5026ab, type: 3}
   m_PrefabInstance: {fileID: 53774706}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &60502586
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1230796437}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: e7f4da3a16f75cd4b92aaf22056bf132, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e7f4da3a16f75cd4b92aaf22056bf132, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e7f4da3a16f75cd4b92aaf22056bf132, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e7f4da3a16f75cd4b92aaf22056bf132, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.1370003
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e7f4da3a16f75cd4b92aaf22056bf132, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.422
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e7f4da3a16f75cd4b92aaf22056bf132, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.2430005
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e7f4da3a16f75cd4b92aaf22056bf132, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.707075
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e7f4da3a16f75cd4b92aaf22056bf132, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.70707494
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e7f4da3a16f75cd4b92aaf22056bf132, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.0067061423
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e7f4da3a16f75cd4b92aaf22056bf132, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0067061665
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e7f4da3a16f75cd4b92aaf22056bf132, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e7f4da3a16f75cd4b92aaf22056bf132, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e7f4da3a16f75cd4b92aaf22056bf132, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -180
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e7f4da3a16f75cd4b92aaf22056bf132, type: 3}
+      propertyPath: m_Name
+      value: BubbleGun
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e7f4da3a16f75cd4b92aaf22056bf132, type: 3}
+--- !u!4 &60502587 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e7f4da3a16f75cd4b92aaf22056bf132, type: 3}
+  m_PrefabInstance: {fileID: 60502586}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &80128641 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 155764575954065790, guid: 54abc12618819004dbabe284eb1edc52, type: 3}
@@ -16759,6 +16833,32 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 8300000, guid: 618ced1d2d130fd43a13b9e865e5918c, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1926256581}
+        m_TargetAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.Interactors.NearFarInteractor,
+          Unity.XR.Interaction.Toolkit
+        m_MethodName: set_enableFarCasting
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1926256580}
+        m_TargetAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.Interactors.NearFarInteractor,
+          Unity.XR.Interaction.Toolkit
+        m_MethodName: set_enableFarCasting
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -35223,7 +35323,7 @@ Transform:
   m_GameObject: {fileID: 514128811}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.137, y: 1.4513, z: 1.1069}
+  m_LocalPosition: {x: 1.137, y: 1.4235, z: 1.1201}
   m_LocalScale: {x: 0.046395946, y: 0.04195007, z: 0.16956326}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -60219,13 +60319,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1178206627}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.0000029504295}
-  m_LocalPosition: {x: 1.137, y: 1.422, z: 1.243}
+  m_LocalRotation: {x: 0.00000016723061, y: 0.9983943, z: -0.05664715, w: 0.0000029457733}
+  m_LocalPosition: {x: 1.137, y: 1.3486, z: 1.273}
   m_LocalScale: {x: 0.046395946, y: 0.09741331, z: 0.046395946}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1230796437}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 6.495, y: 180, z: 0}
 --- !u!65 &1178206629
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -60254,7 +60354,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1178206627}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -61446,7 +61546,7 @@ GameObject:
   - component: {fileID: 1230796434}
   - component: {fileID: 1230796439}
   m_Layer: 0
-  m_Name: BubbleGun (1)
+  m_Name: Burbujeador
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61684,10 +61784,11 @@ Transform:
   m_GameObject: {fileID: 1230796433}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.99995506, z: 0, w: 0.009484413}
-  m_LocalPosition: {x: -8.005, y: -0.448, z: 8.2539}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -7.9558, y: -0.45257, z: 8.3084}
+  m_LocalScale: {x: 1.0442, y: 1.0442, z: 1.0442}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 60502587}
   - {fileID: 1178206628}
   - {fileID: 1598412868}
   - {fileID: 514128812}
@@ -78532,8 +78633,8 @@ Transform:
   m_GameObject: {fileID: 1598412867}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.137, y: 1.4513, z: 1.1821}
-  m_LocalScale: {x: 0.046395946, y: 0.04195007, z: 0.16956326}
+  m_LocalPosition: {x: 1.137, y: 1.4208, z: 1.1979}
+  m_LocalScale: {x: 0.046395946, y: 0.04195007, z: 0.12025765}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1230796437}
@@ -78566,7 +78667,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1598412867}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
