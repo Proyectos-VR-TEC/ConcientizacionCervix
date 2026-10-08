@@ -58,7 +58,7 @@ public class DecisionManager : MonoBehaviour
         panel.ResetPanel();
 
         panel.AlAgarrar();
-        ActivarDianas(index);
+        // ActivarDianas(index);
     }
 
     public void NotificarDecisionCompletada()

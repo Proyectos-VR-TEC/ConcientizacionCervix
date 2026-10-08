@@ -31,6 +31,9 @@ public abstract class PanelDecisionBase : MonoBehaviour
     [Header("Tiempo para mostrar pregunta")]
     public float tiempoParaPregunta = 5f;
 
+    [Header("Dianas del panel")]
+    public GameObject[] dianas; 
+
     protected Image imagen;
     private bool preguntaMostrada = false;
 
@@ -137,6 +140,8 @@ public abstract class PanelDecisionBase : MonoBehaviour
             SetSprite(spritePregunta);
             preguntaMostrada = true;
             tamiImage.SetActive(false);
+
+            MostrarDianas(true); // mostrar dianas cuando se muestra la pregunta
         }
 
         // Fin de la consecuencia
@@ -159,4 +164,11 @@ public abstract class PanelDecisionBase : MonoBehaviour
         if (audioSource != null) audioSource.Stop();
         if (videoPlayer != null) videoPlayer.Stop();
     }
+
+    protected void MostrarDianas(bool mostrar)
+{
+    if (dianas == null) return;
+    foreach (var d in dianas)
+        if (d != null) d.SetActive(mostrar);
+}
 }
