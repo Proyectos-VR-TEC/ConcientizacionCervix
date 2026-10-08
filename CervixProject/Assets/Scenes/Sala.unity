@@ -61566,11 +61566,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Pistola
   balaPrefab: {fileID: 7951335545917781973, guid: 5dab621c4cbf56b4ea57baf96d3fcdb5, type: 3}
   spawnPoint: {fileID: 514128812}
-  velocidadDisparo: 30
+  velocidadDisparo: 1
   shootData: {fileID: 11400000, guid: d2118c973cf3b204db9c4cbd6e96275f, type: 2}
   audioSource: {fileID: 1230796439}
-  cadenciaDisparos: 0.08
-  vidaBala: 10
+  cadenciaDisparos: 0.07
+  vidaBala: 7
+  escalaMin: 0.03
+  escalaMax: 0.09
 --- !u!114 &1230796435
 MonoBehaviour:
   m_ObjectHideFlags: 0

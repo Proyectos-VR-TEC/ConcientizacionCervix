@@ -12,10 +12,14 @@ public class Pistola : MonoBehaviour
     public AudioSource audioSource;
 
     [Header("Cadencia")]
-    public float cadenciaDisparos = 0.08f; // segundos entre balas (0.08 ≈ 12 balas/seg)
+    public float cadenciaDisparos = 0.08f;
 
     [Header("Vida de la bala")]
     public float vidaBala = 10f;
+
+    [Header("Escala de la bala")]           // 🆕
+    public float escalaMin = 0.03f;          // 🆕
+    public float escalaMax = 0.10f;          // 🆕
 
     private XRGrabInteractable grabbable;
     private bool gatilloPresionado = false;
@@ -40,7 +44,7 @@ public class Pistola : MonoBehaviour
     void OnGatilloPresionado(ActivateEventArgs args)
     {
         gatilloPresionado = true;
-        timerDisparo = 0f; // dispara inmediatamente al presionar
+        timerDisparo = 0f;
     }
 
     void OnGatilloSoltado(DeactivateEventArgs args)
@@ -65,6 +69,10 @@ public class Pistola : MonoBehaviour
         if (balaPrefab == null || spawnPoint == null) return;
 
         GameObject nuevaBala = Instantiate(balaPrefab, spawnPoint.position, spawnPoint.rotation);
+
+        // 🆕 Escala aleatoria entre min y max
+        float escala = Random.Range(escalaMin, escalaMax);
+        nuevaBala.transform.localScale = Vector3.one * escala;
 
         Rigidbody rb = nuevaBala.GetComponent<Rigidbody>();
         if (rb != null)
