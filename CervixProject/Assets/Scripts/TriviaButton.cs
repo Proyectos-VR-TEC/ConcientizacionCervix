@@ -30,8 +30,10 @@ public class TriviaButton : MonoBehaviour
             return;
         }
 
-        int correctValue = triviaManager.CurrentCorrectValue;
+        triviaManager.contadorRespuestas++; // Incrementar el contador de respuestas
 
+        int correctValue = triviaManager.CurrentCorrectValue;
+        triviaManager.answered = true; // Marcar que se ha respondido
         if (buttonValue == correctValue)
         {
             onCorrectAnswer.Invoke();

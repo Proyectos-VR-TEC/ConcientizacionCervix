@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using TMPro;
+using System.Collections;
 
 /// <summary>
 /// Controla el mini-juego de trivia asociado a cada pieza del rompecabezas.
@@ -14,8 +15,12 @@ public class TriviaManager : MonoBehaviour
     [Header("Valor correcto de la pieza actualmente en trivia")]
     [SerializeField] private int currentCorrectValue;
     public int CurrentCorrectValue => currentCorrectValue;
+    [SerializeField] private int currentNumPiece;
+    public int CurrentNumPiece => currentNumPiece;
+    public bool answered;
 
     public AudioSource audioSource;
+    public int contadorRespuestas = 0;
 
     [SerializeField] private AudioClip currentCorrectAudioClip;
     [SerializeField] private AudioClip currentIncorrectAudioClip;
@@ -32,6 +37,11 @@ public class TriviaManager : MonoBehaviour
     public XRSimpleInteractable[] simpleInteractables;
     [Header("Texto de Botones")]
     public TextMeshProUGUI[] buttonTexts;
+    [Header("Animators de botones")]
+    public Animator[] buttonAnimators;
+    [Header("Panel respuestas")]
+    public GameObject[] paneles;
+    public PuzzleManager puzzleManager;
 
     /// <summary>
     /// Llamar esto desde la pieza cuando se coloca en su lugar correcto.
@@ -40,12 +50,22 @@ public class TriviaManager : MonoBehaviour
     /// <param name="correctClip">El AudioClip que se reproduce cuando la respuesta es correcta.</param>
     /// <param name="incorrectClip">El AudioClip que se reproduce cuando la respuesta es incorrecta.</param>
     /// <param name="answerOptions">Los TextMesh que muestran las opciones de respuesta.</param>
-    public void StartTrivia(int correctValue, AudioClip correctClip, AudioClip incorrectClip, string[] answerOptions)
+    /// <param name="numPiece">El número de la pieza actual.</param>
+    public void Update()
+    {
+        if (contadorRespuestas >= 6)
+        {
+            puzzleManager.todasRespondidas = true;
+        }
+    }
+    
+    public void StartTrivia(int correctValue, AudioClip correctClip, AudioClip incorrectClip, string[] answerOptions, int numPiece)
     {
         currentCorrectValue = correctValue;
         currentCorrectAudioClip = correctClip;
         currentIncorrectAudioClip = incorrectClip;
         currentAnswerOptions = answerOptions;
+        currentNumPiece = numPiece;
 
         AsignarTextos();
         if (triviaPanel != null)
@@ -131,6 +151,52 @@ public class TriviaManager : MonoBehaviour
         foreach (var simpleInteractable in simpleInteractables)
         {
             simpleInteractable.enabled = false;
+        }
+    }
+
+    // Metodo para cambiar valor de answered a true, para que el panel de respuesta se muestre
+    public void SetAnsweredTrue()
+    {
+        answered = true;
+    }
+
+    public void SetAnsweredFalse()
+    {
+        answered = false;
+    }
+
+    // reproduce una animación con 1 segundo de delay para que el usuario pueda ver la respuesta correcta antes de cerrar el panel
+    public void playBtn(string animaionName)
+    {
+        StartCoroutine(PlayBtn1Coroutine(animaionName));
+    }
+
+    private IEnumerator PlayBtn1Coroutine(string animationName)
+    {
+        yield return new WaitForSeconds(0.1f);
+        switch (animationName)
+        {
+            case "button1Correct":
+                if (buttonAnimators.Length > 0 && buttonAnimators[0] != null)
+                {
+                    buttonAnimators[0].Play("button1Correct");
+                }
+                break;
+            case "button2Correct":
+                if (buttonAnimators.Length > 1 && buttonAnimators[1] != null)
+                {
+                    buttonAnimators[1].Play("button2Correct");
+                }
+                break;
+            case "button3Correct":
+                if (buttonAnimators.Length > 0 && buttonAnimators[0] != null)
+                {
+                    buttonAnimators[2].Play("button3Correct");
+                }
+                break;
+            default:
+                Debug.LogWarning($"TriviaManager: Animación '{animationName}' no reconocida.");
+                break;
         }
     }
 }

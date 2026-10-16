@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 3
   tags:
   - Anchor
+  - PuzzlePiece
+  - Condon
+  - Folder
+  - Calendario
+  - Bala
+  - RoomGeometry
   layers:
   - Default
   - TransparentFX
@@ -12,7 +18,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - RoomGeometry
   - 
   - 
   - 
