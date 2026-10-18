@@ -22390,7 +22390,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &210598702
 AudioSource:
   m_ObjectHideFlags: 0
@@ -48505,7 +48505,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 2
+          m_FloatArgument: 2.55
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -49542,7 +49542,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 2
+          m_FloatArgument: 2.55
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -74194,7 +74194,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1148145646
 Transform:
   m_ObjectHideFlags: 0
@@ -88138,7 +88138,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 2
+          m_FloatArgument: 2.55
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -108175,7 +108175,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1754073135056514947, guid: 0c7e1ecbb000e094baf9372efd7bbc83, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2801676484431399399, guid: 0c7e1ecbb000e094baf9372efd7bbc83, type: 3}
       propertyPath: m_Sprite
@@ -117792,7 +117792,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1847214917
 MonoBehaviour:
   m_ObjectHideFlags: 0
