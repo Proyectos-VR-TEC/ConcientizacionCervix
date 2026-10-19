@@ -122,6 +122,18 @@ public class TriviaManager : MonoBehaviour
         }
     }
 
+
+    // habilitar grab interactables con delay 
+    public void EnableGrabInteractablesWithDelay(float delay)
+    {
+        StartCoroutine(EnableGrabInteractablesCoroutine(delay));
+    }
+
+    private IEnumerator EnableGrabInteractablesCoroutine(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        EnableGrabInteractables();
+    }
     public void EnableGrabInteractables()
     {
         foreach (var grabInteractable in grabInteractables)

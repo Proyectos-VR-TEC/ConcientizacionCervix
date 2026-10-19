@@ -37611,7 +37611,7 @@ Light:
   serializedVersion: 12
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 11.79
+  m_Intensity: 2.16
   m_Range: 10
   m_SpotAngle: 122.62938
   m_InnerSpotAngle: 69.22943
@@ -48487,13 +48487,13 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1667290818}
         m_TargetAssemblyTypeName: TriviaManager, Assembly-CSharp
-        m_MethodName: EnableGrabInteractables
-        m_Mode: 1
+        m_MethodName: EnableGrabInteractablesWithDelay
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0
+          m_FloatArgument: 3
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -48586,13 +48586,13 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1667290818}
         m_TargetAssemblyTypeName: TriviaManager, Assembly-CSharp
-        m_MethodName: EnableGrabInteractables
-        m_Mode: 1
+        m_MethodName: EnableGrabInteractablesWithDelay
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0
+          m_FloatArgument: 3
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -48604,7 +48604,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 2
+          m_FloatArgument: 2.55
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -49524,13 +49524,13 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1667290818}
         m_TargetAssemblyTypeName: TriviaManager, Assembly-CSharp
-        m_MethodName: EnableGrabInteractables
-        m_Mode: 1
+        m_MethodName: EnableGrabInteractablesWithDelay
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0
+          m_FloatArgument: 3
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -49623,13 +49623,13 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1667290818}
         m_TargetAssemblyTypeName: TriviaManager, Assembly-CSharp
-        m_MethodName: EnableGrabInteractables
-        m_Mode: 1
+        m_MethodName: EnableGrabInteractablesWithDelay
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0
+          m_FloatArgument: 3
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -49641,7 +49641,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 2
+          m_FloatArgument: 2.55
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -74194,7 +74194,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1148145646
 Transform:
   m_ObjectHideFlags: 0
@@ -88120,13 +88120,13 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1667290818}
         m_TargetAssemblyTypeName: TriviaManager, Assembly-CSharp
-        m_MethodName: EnableGrabInteractables
-        m_Mode: 1
+        m_MethodName: EnableGrabInteractablesWithDelay
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0
+          m_FloatArgument: 3
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -88219,13 +88219,13 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1667290818}
         m_TargetAssemblyTypeName: TriviaManager, Assembly-CSharp
-        m_MethodName: EnableGrabInteractables
-        m_Mode: 1
+        m_MethodName: EnableGrabInteractablesWithDelay
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0
+          m_FloatArgument: 3
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -88237,7 +88237,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 2
+          m_FloatArgument: 2.55
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -108175,7 +108175,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1754073135056514947, guid: 0c7e1ecbb000e094baf9372efd7bbc83, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2801676484431399399, guid: 0c7e1ecbb000e094baf9372efd7bbc83, type: 3}
       propertyPath: m_Sprite
