@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Diana : MonoBehaviour
 {
@@ -10,17 +11,11 @@ public class Diana : MonoBehaviour
     public PanelDecisionBase panel;
 
     [Header("Feedback (opcional)")]
-    public Renderer rend;
-    public Color colorImpacto = Color.green;
-    private Color colorOriginal;
+    
+    public UnityEvent onCollisionEvent; // Evento que se dispara al colisionar con la bala
 
     private bool yaDisparada = false;
     private bool bloqueada = false;   // 🆕
-
-    void Awake()
-    {
-        if (rend != null) colorOriginal = rend.material.color;
-    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -30,7 +25,7 @@ public class Diana : MonoBehaviour
 
         yaDisparada = true;
 
-        if (rend != null) rend.material.color = colorImpacto;
+        onCollisionEvent?.Invoke();
 
         Destroy(other.gameObject);
 
@@ -57,7 +52,8 @@ public class Diana : MonoBehaviour
     public void ResetDiana()
     {
         yaDisparada = false;
-        bloqueada = false;                            // 🆕
-        if (rend != null) rend.material.color = colorOriginal;
+        bloqueada = false;             
     }
+
+
 }
